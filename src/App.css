@@ -1,0 +1,87 @@
+html {
+  overflow:auto;
+}
+
+
+html, body, #root {
+  height: 100%;
+  display: flex;
+  margin:0;
+  scroll-behavior: smooth;
+ 
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* General styles for both forms */
+.input-field {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 15px;
+  font-size: 18px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.submit-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  transform: translateY(1px);
+}
+
+/* Specific styles for contact form */
+.contact-form .input-field {
+  background-color: #e0f7fa;
+}
+
+.contact-form .submit-button {
+  background-color: #008080;
+}
+
+.contact-form .submit-button:hover {
+  background-color: #005656;
+}
+
+/* Specific styles for newsletter form */
+.newsletter-form .input-field {
+  background-color: #e1f1ff;
+}
+
+.newsletter-form .submit-button {
+  background-color: #ff9800;
+}
+
+.newsletter-form .submit-button:hover {
+  background-color: #e68900;
+}
