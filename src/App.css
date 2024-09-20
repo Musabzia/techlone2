@@ -1,17 +1,4 @@
-html {
-  overflow:auto;
-}
 
-
-html, body, #root {
-  height: 100%;
-  display: flex;
-  margin:0;
-  scroll-behavior: smooth;
- 
-  flex-direction: column;
-  min-height: 100vh;
-}
 
 
 /* General styles for both forms */
@@ -66,11 +53,11 @@ html, body, #root {
 }
 
 .contact-form .submit-button {
-  background-color: #008080;
+  background-color: #0088ff;
 }
 
 .contact-form .submit-button:hover {
-  background-color: #005656;
+  background-color: #006be6;
 }
 
 /* Specific styles for newsletter form */
@@ -79,9 +66,34 @@ html, body, #root {
 }
 
 .newsletter-form .submit-button {
-  background-color: #ff9800;
+  background-color: #0088ff;
 }
 
 .newsletter-form .submit-button:hover {
-  background-color: #e68900;
+  background-color: #006be6;
+}
+
+
+.social-icons {
+  display: flex;
+  
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: white; /* Set icon color to white */
+  font-size: 24px; /* Adjust icon size */
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ccc; /* Lighten color on hover */
+}
+
+.socials-container {
+  
+  margin-top: 20px;
+  text-align: center;
 }
