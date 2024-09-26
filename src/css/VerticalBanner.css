@@ -1,40 +1,42 @@
-.vertical-banner {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-  /* Disable scrollbar on all browsers */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
 
-.vertical-banner::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
 
-html, body, #root {
-  scroll-behavior: smooth;
-  height: 100%; /* Ensure full viewport height */
-  margin: 0; /* Remove any margin */
-  overflow: hidden;
-  padding: 0;
-  margin: 0; /* Prevent any page-level scroll */
-}
+  .vertical-banner {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    /* Disable scrollbar on all browsers */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 
-/* Each section will take up the full viewport height */
-.banner-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
+  .vertical-banner::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 
-  scroll-snap-align: start;
-}
+  html, body, #root {
+    scroll-behavior: smooth;
+    height: 100%; /* Ensure full viewport height */
+    margin: 0; /* Remove any margin */
+    
+    padding: 0;
+    margin: 0; /* Prevent any page-level scroll */
+  }
 
-.banner-content{
-  text-align: center;
-}
+  /* Each section will take up the full viewport height */
+  .banner-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
 
-/* Add this CSS for the navigation dots */
+    scroll-snap-align: start;
+  }
+
+  .banner-content{
+    text-align: center;
+  }
+
+  /* Add this CSS for the navigation dots */
 

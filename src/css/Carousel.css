@@ -1,0 +1,37 @@
+/* Full height carousel container */
+html,body{
+    padding: 0;
+    margin:0;
+}
+/* Full height carousel container */
+.carousel-container {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scroll-snap-type: y mandatory; /* Enable scroll snap */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+  }
+  
+  /* Each slide should fill the full size of the container */
+  .carousel-slide {
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height of viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center; /* Align to the center of the viewport */
+    position: relative; /* Ensure relative positioning */
+  }
+  
+  /* Ensure images cover the slide */
+  .carousel-image {
+    width: 100%; /* Fill the width */
+    height: 100%; /* Fill the height */
+    object-fit: cover; /* Cover the entire slide */
+    position: absolute; /* Position image absolutely */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Translate to ensure centering */
+  }
+  
+  
