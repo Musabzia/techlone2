@@ -23,7 +23,7 @@ const FooterComponent = () => {
         <div className="s-logo">
           <a href="https://www.facebook.com/techlonglobal/"><i className="fab fa-facebook"></i></a>
           <a href="https://twitter.com/Techlone_Global"><i className="fab fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/company/unavailable/"><i className="fab fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/company/techlone-global/"><i className="fab fa-linkedin"></i></a>
         </div>
         <br />
 

@@ -1,4 +1,4 @@
-.twitchtitle-img {
+/* .twitchtitle-img {
     
   background-size: cover;
   background-position: center;
@@ -50,9 +50,7 @@
   
   
   
-  /* Modal styles */
-
-/* Modal styles */
+ 
 .modal {
   display: flex;
   justify-content: center;
@@ -64,13 +62,13 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  cursor: pointer; /* Add cursor style for the modal */
+  cursor: pointer;
 }
 
 .modal-content {
   max-width: 90%;
   max-height: 90%;
-  cursor: auto; /* Default cursor for the image */
+  cursor: auto; 
 }
 
 .close-modal {
@@ -106,4 +104,4 @@
       font-size: 16px;
     }
   }
-  
+   */

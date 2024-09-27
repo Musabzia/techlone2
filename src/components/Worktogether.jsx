@@ -21,7 +21,7 @@ const Worktogether = () => {
           <FontAwesomeIcon icon={faTwitter} />
         </a>
 
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/company/techlone-global/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <FontAwesomeIcon icon={faLinkedinIn} />
         </a>
 
