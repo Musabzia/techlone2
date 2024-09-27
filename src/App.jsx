@@ -11,6 +11,9 @@ import Graphics from './pages/Graphics';
 import Blockchain from './pages/Blockchain';
 import Illustrations from './pages/Illustrations';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 function App() {
   return (

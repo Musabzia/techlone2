@@ -1,15 +1,14 @@
 import React from "react";
-
+import WebComponent from "../components/WebComponent";
 
 
 const Website =()=> {
     return(
 <>
 
-<div>
-        <h1>Website Service</h1>
-        <p>Details about the Graphics service.</p>
-      </div>
+        <>
+        <WebComponent />
+        </>
  </>
     );
 };

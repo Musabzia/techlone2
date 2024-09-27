@@ -1,0 +1,36 @@
+.headings {
+    text-align: center;
+    padding: 0px 0px 100px 0px;
+    margin: 0 auto;
+    width: 120vh;
+    color: #fff; /* Text color */
+    
+  }
+  
+  .headings h1 {
+    font-size: 2.5em; /* Large font size for the heading */
+    margin: 0.5em 0; /* Space above and below */
+    font-weight: bold; /* Bold font weight */
+  }
+  
+  .headings p {
+    font-size: 1.5em; 
+    line-height: 1.5; 
+    
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .headings{
+      width: 60vw;
+      padding: 0px 0px 100px 0px;
+    }
+    .headings h1 {
+      font-size: 2em; /* Smaller font size on smaller screens */
+    }
+  
+    .headings p {
+      font-size: 1em; /* Adjust paragraph font size */
+    }
+  }
+  

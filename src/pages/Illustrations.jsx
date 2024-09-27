@@ -1,12 +1,12 @@
 import React from "react";
+import IllustrationComponent from "../components/IllustrationComponent";
 
 const Illustrations =()=> {
     return(
 
-        <div>
-        <h1>Illustrations Service</h1>
-        <p>Details about the Illustrations service.</p>
-      </div>
+        <>
+        <IllustrationComponent />
+      </>
 
     );
 };

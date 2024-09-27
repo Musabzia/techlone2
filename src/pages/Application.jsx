@@ -1,12 +1,12 @@
 import React from "react";
+import AppComponent from "../components/AppComponent";
 
 const Application =()=> {
     return(
 
-        <div>
-        <h1>app Service</h1>
-        <p>Details about the Twitch service.</p>
-      </div>
+      <>
+       <AppComponent />
+      </>
 
     );
 };

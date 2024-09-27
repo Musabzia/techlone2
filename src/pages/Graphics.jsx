@@ -1,12 +1,12 @@
 import React from "react";
+import GraphicComponent from "../components/GraphicComponent";
 
 const Graphics =()=> {
     return(
 
-        <div>
-        <h1>Graphics Service</h1>
-        <p>Details about the Graphics service.</p>
-      </div>
+      <>
+      <GraphicComponent />  
+      </>
 
     );
 };

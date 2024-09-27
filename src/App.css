@@ -1,5 +1,7 @@
 
-
+html, body{
+  scroll-behavior: smooth;
+}
 
 /* General styles for both forms */
 .input-field {
