@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Application.css';
 
-import AppBackground from '../img/AppCover.png';
-import webcover from '../img/web-cover.png';
-import GraphicBackground from '../img/graphiccover.png';
-import AppImg1 from '../img/app1.jpg';
-import AppImg2 from '../img/app2.jpg';
-import AppImg3 from '../img/app7.jpg';
-import AppImg5 from '../img/app5.jpg';
-import AppImg6 from '../img/app6.jpg';
+import AppBackground from '../img/AppCover.webp';
+import webcover from '../img/web-cover.webp';
+import GraphicBackground from '../img/graphiccover.webp';
+import AppImg1 from '../img/app1.webp';
+import AppImg2 from '../img/app2.webp';
+import AppImg3 from '../img/app7.webp';
+import AppImg5 from '../img/app5.webp';
+import AppImg6 from '../img/app6.webp';
 
 import Worktogether from '../components/Worktogether';
 import Slider from '../components/WebCompSlider';

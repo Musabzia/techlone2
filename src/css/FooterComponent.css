@@ -8,7 +8,7 @@ footer {
   align-items: center;
   background-color: rgba(255, 255, 255, 0);
   color: #fff;
-  padding: 50px 50px 50px 0; /* Add padding for mobile devices */
+  padding: 50px 0 50px 0; /* Add padding for mobile devices */
   position: relative;
   top: 80px;
   flex-wrap: wrap; /* Allow content to wrap on smaller screens */

@@ -1,21 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Graphic.css';
-import GraphicBackground from '../img/graphiccover.png';
-import BlockBackground from '../img/bitcoin.png';
-import AppBackground from '../img/AppCover.png';
+import GraphicBackground from '../img/graphiccover.webp';
+import BlockBackground from '../img/bitcoin.webp';
+import AppBackground from '../img/AppCover.webp';
 
-import graphicImg1 from '../img/graphic12.png';
-import graphicImg2 from '../img/graphic8.png';
-import graphicImg3 from '../img/graphic.png';
-import graphicImg4 from '../img/graphic10.png';
-import graphicImg5 from '../img/graphic6.png';
-import graphicImg6 from '../img/graphic7.png';
-import graphicImg7 from '../img/graphic3.png';
-import graphicImg8 from '../img/graphic4.png';
-import graphicImg9 from '../img/graphic5.png';
-import graphicImg10 from '../img/graphic9.png';
-import graphicImg11 from '../img/graphic11.png';
-import graphicImg12 from '../img/graphic13.png';
+import graphicImg1 from '../img/graphic1.webp';
+import graphicImg2 from '../img/graphic2.webp';
+import graphicImg3 from '../img/graphic3.webp';
+import graphicImg4 from '../img/graphic4.webp';
+import graphicImg5 from '../img/graphic5.webp';
+import graphicImg6 from '../img/graphic6.webp';
+import graphicImg7 from '../img/graphic7.webp';
+import graphicImg8 from '../img/graphic8.webp';
+import graphicImg9 from '../img/graphic9.webp';
+import graphicImg10 from '../img/graphic10.webp';
+import graphicImg11 from '../img/graphic11.webp';
+import graphicImg12 from '../img/graphic12.webp';
+import graphicImg13 from '../img/graphic13.webp';
+import graphicImg14 from '../img/graphic14.webp';
+import graphicImg15 from '../img/graphic15.webp';
+import graphicImg16 from '../img/graphic16.webp';
+import graphicImg17 from '../img/graphic17.webp';
+import graphicImg18 from '../img/graphic18.webp';
+
+
 
 import Footer from './FooterComponent';
 import LogoAnime from './LogoAnime';
@@ -84,7 +92,9 @@ const GraphicComponent = () => {
 
           {[graphicImg1, graphicImg2, graphicImg3, graphicImg4,
             graphicImg5, graphicImg6, graphicImg7, graphicImg8,
-            graphicImg9, graphicImg10, graphicImg11, graphicImg12].map((img, index) => (
+            graphicImg9, graphicImg10, graphicImg11, graphicImg12, 
+            graphicImg13,graphicImg14, graphicImg15, graphicImg16,
+            graphicImg17, graphicImg18,].map((img, index) => (
 
             <a href="#!" key={index} onClick={() => openModal(img)}>
 

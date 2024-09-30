@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import '../css/carousel.css';
-import img1 from '../img/bitcoin.png'; 
-import img2 from '../img/web-cover.png';
-import img3 from '../img/appcover.png';
+import img1 from '../img/bitcoin.webp'; 
+import img2 from '../img/web-cover.webp';
+import img3 from '../img/appcover.webp';
 
 const images = [img1, img2, img3];
 

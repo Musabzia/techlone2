@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/LogoAnime.css';
 
-import Logo from '../img/iconlogo.png';
+import Logo from '../img/iconlogo.webp';
 
 const LogoAnime = () => {
     return (

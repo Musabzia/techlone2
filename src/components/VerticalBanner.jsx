@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import GetInTouchForm from './GetInTouchForm.jsx';
 import NewsletterForm from './NewsletterForm.jsx';
 import '../css/VerticalBanner.css';
-import pic1 from '../img/blue.jpg';
-import pic2 from '../img/bitcoin.png';
-import pic3 from '../img/appcover.png';
-import pic4 from '../img/web-cover.png';
-import pic5 from '../img/twitchcover.png';
-import pic6 from '../img/graphiccover.png';
-import pic7 from '../img/illustrationcover.png';
+import pic1 from '../img/blue.webp';
+import pic2 from '../img/bitcoin.webp';
+import pic3 from '../img/appcover.webp';
+import pic4 from '../img/web-cover.webp';
+import pic5 from '../img/twitchcover.webp';
+import pic6 from '../img/graphiccover.webp';
+import pic7 from '../img/illustrationcover.webp';
 
 const banners = [
   {

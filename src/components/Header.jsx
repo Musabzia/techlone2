@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import icon from '../img/favicon.png'
+import icon from '../img/favicon.webp';
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isOpen, setIsOpen] = useState(false);

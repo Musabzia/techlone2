@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Illustration.css'; 
 
-import illustrationBackground from '../img/illustrationcover.png';
-import BlockBackground from '../img/bitcoin.png';
-import twitchBackground from '../img/twitchcover.png';
-import illustrationImg1 from '../img/01.png';
-import illustrationImg2 from '../img/02.png';
-import illustrationImg3 from '../img/03.png';
-import illustrationImg4 from '../img/04.png';
-import illustrationImg5 from '../img/07.png';
-import illustrationImg6 from '../img/08.png';
+import illustrationBackground from '../img/illustrationcover.webp';
+import BlockBackground from '../img/bitcoin.webp';
+import twitchBackground from '../img/twitchcover.webp';
+import illustrationImg1 from '../img/Illustration1.webp';
+import illustrationImg2 from '../img/Illustration2.webp';
+import illustrationImg3 from '../img/Illustration3.webp';
+import illustrationImg4 from '../img/Illustration4.webp';
+import illustrationImg5 from '../img/Illustration7.webp';
+import illustrationImg6 from '../img/Illustration8.webp';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';

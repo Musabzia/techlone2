@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../css/ServiceSlider.css';
-import twitchCover from '../img/twitchcover.png';
-import webCover from '../img/web-cover.png';
-import appCover from '../img/AppCover.png';
-import graphicCover from '../img/graphiccover.png';
-import bitcoinCover from '../img/bitcoin.png';
-import illustrationCover from '../img/illustrationcover.png';
+import twitchCover from '../img/twitchcover.';
+import webCover from '../img/web-cover.';
+import appCover from '../img/AppCover.';
+import graphicCover from '../img/graphiccover.';
+import bitcoinCover from '../img/bitcoin.';
+import illustrationCover from '../img/illustrationcover.';
 import LogoAnime from './LogoAnime';
 
 

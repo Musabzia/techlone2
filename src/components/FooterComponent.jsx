@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../img/tech.png';
+import logo from '../img/tech.webp';
 import '../css/FooterComponent.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -42,7 +42,7 @@ const FooterComponent = () => {
         </a>
 
       </div>
-        <p>Copyright 2024 / All rights reserved<br />Designed by Techlone</p>
+        <p>Copyright 2024 / All rights reserved <br/> Designed by Techlone</p>
       </div>
     </footer>
   );
