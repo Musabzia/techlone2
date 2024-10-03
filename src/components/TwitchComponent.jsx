@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import illustrationBackground from '../img/illustrationcover.webp';
 import webcover from '../img/web-cover.webp';
 import twitchBackground from '../img/twitchcover.webp';
@@ -94,11 +95,26 @@ const TwitchComponent = () => {
     <>
       <LogoAnime />
       <div className="relative flex items-center justify-center h-screen bg-cover bg-center text-white" style={{ backgroundImage: `url(${twitchBackground})` }}>
-        <h1 data-aos='fade-up' data-aos-easing="linear" data-aos-duration="1000" className="text-6xl md:text-8xl text-center">Twitch Services</h1>
-      </div>
+  <h1 
+    data-aos='fade-up' 
+    data-aos-easing="linear" 
+    data-aos-duration="1000" 
+    className="font-semibold text-5xl md:text-8xl text-center text-shadow leading-snug"
+  >
+    Twitch Services
+  </h1>
+</div>
+
 
       <div className="py-24 bg-black text-aliceblue flex flex-col items-center">
-        <Heading />
+        <Heading 
+                title="At Techlone" 
+                description="
+                Transform your Twitch channel with our all-inclusive package.
+                Gain custom overlays and graphics that capture your brand's essence.
+                Manage your stream effortlessly with our tools, engage your audience with proven strategies,
+                and track growth with in-depth analytics. Elevate every aspect of your stream and fuel its success!"
+        />
 
         {/* Centered grid layout for images */}
         <div className="flex flex-col items-center">
@@ -109,6 +125,7 @@ const TwitchComponent = () => {
             <img
               src={images[0].src}
               alt={images[0].alt}
+              data-aos="fade-up" data-aos-duration="1000"
               onClick={() => openModal(images[0].src)}
               className="w-5/6 h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
             />
@@ -119,6 +136,7 @@ const TwitchComponent = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
+                  data-aos="fade-up" data-aos-duration="800"
                   onClick={() => openModal(image.src)}
                   className="w-full h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer object-cover"
                 />
@@ -132,6 +150,7 @@ const TwitchComponent = () => {
             <img
               src={images[3].src}
               alt={images[3].alt}
+              data-aos="fade-up" data-aos-duration="1000"
               onClick={() => openModal(images[3].src)}
               className="w-5/6 h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
             />
@@ -143,6 +162,7 @@ const TwitchComponent = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
+                  data-aos="fade-up" data-aos-duration="800"
                   onClick={() => openModal(image.src)}
                   className="w-full h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer object-cover"
                 />
@@ -158,6 +178,7 @@ const TwitchComponent = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
+                  data-aos="fade-up" data-aos-duration="800"
                   onClick={() => openModal(image.src)}
                   className="w-full h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer object-contain"
                 />
@@ -170,6 +191,7 @@ const TwitchComponent = () => {
             <img
               src={images[6].src}
               alt={images[6].alt}
+              data-aos="fade-up" data-aos-duration="1000"
               onClick={() => openModal(images[6].src)}
               className="w-5/6 h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
             />
@@ -182,6 +204,7 @@ const TwitchComponent = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
+                  data-aos="fade-up" data-aos-duration="800"
                   onClick={() => openModal(image.src)}
                   className="w-full h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer object-contain"
                 />
@@ -192,6 +215,7 @@ const TwitchComponent = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
+                  data-aos="fade-up" data-aos-duration="800"
                   onClick={() => openModal(image.src)}
                   className="w-full h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer object-contain"
                 />
@@ -206,6 +230,7 @@ const TwitchComponent = () => {
             <img
               src={images[10].src}
               alt={images[10].alt}
+              data-aos="fade-up" data-aos-duration="1000"
               onClick={() => openModal(images[10].src)}
               className="w-5/6 h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
             />
@@ -218,6 +243,7 @@ const TwitchComponent = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
+                  data-aos="fade-up" data-aos-duration="800"
                   onClick={() => openModal(image.src)}
                   className="w-full h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer object-contain"
                 />
@@ -230,6 +256,7 @@ const TwitchComponent = () => {
             <img
               src={images[19].src}
               alt={images[19].alt}
+              data-aos="fade-up" data-aos-duration="1000"
               onClick={() => openModal(images[19].src)}
               className="w-full h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
             />

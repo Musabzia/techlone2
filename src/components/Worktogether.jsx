@@ -5,7 +5,9 @@ import '../css/Worktogether.css';
 
 const Worktogether = () => {
   return (
+    
     <div className="oval">
+      
 
       <a className="worktogether" href="https://techloneglobal.com/">
         <h1>Let's work together</h1>

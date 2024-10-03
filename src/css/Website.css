@@ -12,7 +12,9 @@
 }
 
 .webtitle-img h1 {
-  font-size: 15vh;
+  font-size: 6rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   text-align: center;
 }
 
@@ -27,14 +29,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center; /* Center the images */
-  gap: 30px; /* Add space between images */
+  gap: 100px; /* Add space between images */
 }
 
 .web-services img {
-  height: auto;
-  width: 70vw;
+  width: 70vw; 
+  height: 85vh; 
   padding: 0;
   transition: transform 0.4s ease-in-out;
+  border-radius: 9px;
 }
 
 .web-services img:hover {
@@ -79,11 +82,12 @@
 
 @media (max-width: 768px) {
   .webtitle-img h1 {
-    font-size: 6vh;
+    font-size: 5.5vh;
   }
 
   .web-services img {
     padding: 0.5em;
+    height: 28vh;
     width: 94vw;
   }
 

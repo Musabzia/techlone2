@@ -24,6 +24,7 @@ import Footer from './FooterComponent';
 import LogoAnime from './LogoAnime';
 import Worktogether from './Worktogether';
 import Slider from './WebCompSlider';
+import Heading from '../components/Heading';
 
 const slides = [
   {
@@ -71,18 +72,25 @@ const BlockchainComponent = () => {
         className="relative flex items-center justify-center h-screen bg-cover bg-center text-white"
         style={{ backgroundImage: `url(${BlockBackground})` }}
       >
-        <h1 data-aos='fade-up' data-aos-easing="linear" data-aos-duration="1000" className="text-6xl md:text-8xl text-center">
-          Blockchain <br /> Development
+        <h1 data-aos='fade-up' 
+    data-aos-easing="linear" 
+    data-aos-duration="1000" 
+    className="font-semibold text-5xl md:text-8xl text-center text-shadow leading-snug">
+          Blockchain Development
         </h1>
       </div>
 
       <div className="py-24 bg-black text-white flex flex-col items-center">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-semibold">At Techlone</h1>
-          <p className="mt-4 text-lg px-4 sm:px-6 md:px-8 lg:px-32">
-            Embrace the future of technology with expert blockchain development services. Whether you're a startup exploring blockchain opportunities or an established enterprise seeking to optimize your operations, we have the expertise and resources to bring your vision to life. Get in touch with us today to discuss your blockchain project requirements and take the first step towards innovation and success.
-          </p>
-        </div>
+        <Heading 
+            title="At Techlone" 
+            description="
+            Embrace the future of technology with expert blockchain development services. 
+            Whether you're a startup exploring blockchain opportunities or an established 
+            enterprise seeking to optimize your operations, we have the expertise and resources
+            to bring your vision to life. Get in touch with us today to discuss your blockchain
+            project requirements and take the first step towards innovation and success.they're
+            gateways that engage and inspire."
+        />
 
         {/* Centered grid layout for images */}
           <div className="grid grid-cols-2 gap-4 px-4 sm:px-8 md:px-12 lg:px-36">
@@ -91,6 +99,7 @@ const BlockchainComponent = () => {
                 <img
                 src={img}
                 alt={`blockchain ${index + 2}`} // Adjust the alt text if needed
+                data-aos="fade-up" data-aos-duration="1000"
                 onClick={() => openModal(img)}
                 className="w-full h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer object-cover"
                />
@@ -104,33 +113,13 @@ const BlockchainComponent = () => {
             <img
               src={images[6]} // Reference the specific image by index
               alt={`blockchain 7`} // Update the alt text accordingly
+              data-aos="fade-up" data-aos-duration="1000"
               onClick={() => openModal(images[6])} // Open modal with this image
              className="w-5/6 h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
            />
           </div>
         </div>
-{/* 
-        <div className="flex flex-col items-center">
-          <div className="flex mb-4 justify-center">
-            <img
-              src={images[7]} // Reference the specific image by index
-              alt={`blockchain 7`} // Update the alt text accordingly
-              onClick={() => openModal(images[7])} // Open modal with this image
-             className="w-6/6 h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
-           />
-          </div>
-        </div>
 
-        <div className="flex flex-col items-center">
-          <div className="flex mb-4 justify-center">
-            <img
-              src={images[8]} // Reference the specific image by index
-              alt={`blockchain 7`} // Update the alt text accordingly
-              onClick={() => openModal(images[8])} // Open modal with this image
-             className="w-6/6 h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
-           />
-          </div>
-        </div> */}
 
 <div className="grid grid-cols-2 gap-4 px-4 sm:px-8 md:px-12 lg:px-36">
             {images.slice(7, 9).map((img, index) => (
@@ -138,6 +127,7 @@ const BlockchainComponent = () => {
                 <img
                 src={img}
                 alt={`blockchain ${index + 2}`} // Adjust the alt text if needed
+                data-aos="fade-up" data-aos-duration="1000"
                 onClick={() => openModal(img)}
                 className="w-full h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer object-cover"
                />
@@ -150,6 +140,7 @@ const BlockchainComponent = () => {
             <img
               src={images[9]} // Reference the specific image by index
               alt={`blockchain 7`} // Update the alt text accordingly
+              data-aos="fade-up" data-aos-duration="1000"
               onClick={() => openModal(images[9])} // Open modal with this image
              className="w-5/6 h-auto rounded-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
            />

@@ -81,7 +81,7 @@
 /* Media Queries */
 @media (max-width: 768px) {
   .blocktitle-img h1 {
-    font-size: 6vh; /* Responsive font size */
+    font-size: 4.5vh; /* Responsive font size */
   }
 
   .block-services img {

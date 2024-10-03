@@ -23,6 +23,16 @@ import Slider from './WebCompSlider';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+// Create an array for illustration images
+const illustrationImages = [
+  illustrationImg1,
+  illustrationImg2,
+  illustrationImg3,
+  illustrationImg4,
+  illustrationImg5,
+  illustrationImg6
+];
+
 const IllustrationComponent = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState(null);
@@ -42,39 +52,52 @@ const IllustrationComponent = () => {
   const slides = [
     {
       title: 'Blockchain Development',
-      image: BlockBackground, // Reference the imported image
+      image: BlockBackground,
       link: '/blockchain',
       className: 'webdev',
     },
     {
       title: 'Twitch Services and Packages',
-      image: twitchBackground, // Reference the imported image
+      image: twitchBackground,
       link: '/twitch',
       className: 'graphic',
     },
   ];
 
   useEffect(() => {
-    AOS.init();
+    AOS.init(); // Initialize AOS
   }, []);
 
   return (
     <>
       <LogoAnime />
-      <div className="illustrationtitle-img" style={{ backgroundImage: `url(${illustrationBackground})` }}>
+      <div 
+        className="illustrationtitle-img" 
+        style={{ backgroundImage: `url(${illustrationBackground})` }}
+      >
         <h1 data-aos='fade-up' data-aos-easing="linear" data-aos-duration="1000">Illustrations</h1>
       </div>
 
       <div className="illustration-container">
         {/* Heading */}
-          <Heading />
-          
+        <Heading 
+          title="At Techlone" 
+          description="
+          Creativity meets strategy. Our designs aren't just visually stunning;
+          they're crafted to amplify your brand's essence. We breathe life into ideas,
+          translating them into captivating visuals that resonate and leave an indelible mark."
+        />
         
-
         <div className="illustration-services">
-          {[illustrationImg1, illustrationImg2, illustrationImg3, illustrationImg4, illustrationImg5, illustrationImg6].map((img, index) => (
+          {illustrationImages.map((img, index) => (
             <a href="#!" key={index} onClick={() => openModal(img)}>
-              <img src={img} alt={`illustration ${index + 1}`} />
+              <img 
+                data-aos='fade-up' 
+                
+                data-aos-duration="8000" 
+                src={img} 
+                alt={`illustration ${index + 1}`} 
+              />
             </a>
           ))}
         </div>

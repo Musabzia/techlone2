@@ -1,7 +1,6 @@
 /* General styles */
 .illustrationtitle-img {
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
@@ -12,7 +11,9 @@
 }
 
 .illustrationtitle-img h1 {
-  font-size: 15vh;
+  font-size: 6rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   text-align: center;
 }
 
@@ -27,12 +28,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 100px;
 }
 
 .illustration-services img {
   max-width: 75vw; /* Make it responsive */
   padding: 5px 1em;
   transition: transform 0.4s ease-in-out;
+  border-radius: 40px;
 }
 
 .illustration-services img:hover {
@@ -84,5 +87,8 @@
   .illustration-services img {
     padding: 0.5em;
     max-width: 100%;
+  }
+  .illustration-services {
+    gap: 50px;
   }
 }

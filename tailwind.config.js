@@ -6,10 +6,22 @@ export default {
   ],
   theme: {
     extend: {
-      animation:{
+      animation: {
         spin: 'spin 2s linear infinite',
-      }
+      },
+      // Adding text shadow customization
+      boxShadow: {
+        'text': '2px 2px 5px rgba(0, 0, 0, 0.7)',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      addUtilities({
+        '.text-shadow': {
+          textShadow: '2px 2px 5px rgba(0, 0, 0, 0.7)',
+        },
+      });
+    },
+  ],
 }

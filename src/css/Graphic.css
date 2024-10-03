@@ -12,12 +12,15 @@
 }
 
 .graphictitle-img h1 {
-  font-size: 15vh;
+  font-size: 6rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   text-align: center;
 }
 
 .graphic-container {
   padding: 100px 0px;
+  overflow: hidden;
   background-color: black;
   color: aliceblue;
 }
@@ -30,16 +33,109 @@
 }
 
 .graphic-services img {
-  width: 28vw; /* Adjust as needed */
+  
   height: auto;
-  padding: 5px 1em;
+  padding-top: 100px;
   transition: transform 0.4s ease-in-out;
 }
 
 .graphic-services img:hover {
   transform: scale(1.1);
 }
+.img-0 {
+  width: 18vw;
+  margin-left: 120px;
+}
 
+
+.img-1 {
+  width: 18vw;
+  margin: 0 140px;
+}
+
+.img-2 {
+  width: 18vw;
+  margin-right: 120px;
+}
+
+.img-3 {
+  width: 26vw;
+  margin-left: 120px;
+}
+
+.img-4{
+  width: 26vw;
+  
+
+}
+.img-5{
+  width: 26vw;
+  margin-right: 120px;
+}
+
+
+.img-6 {
+  width: 18vw;
+  margin-left: 120px;
+}
+
+.img-7 {
+  width: 18vw;
+  margin: 0 150px;
+}
+
+.img-8 {
+  width: 18vw;
+  margin-right: 120px;
+}
+
+.img-9 {
+  width: 26vw;
+  margin-left: 80px;
+}
+
+.img-10{
+  width: 26vw;
+  margin-left: 80px;
+  margin-right: 80px;
+
+}
+.img-11{
+  width: 26vw;
+  margin-right: 80px;
+}
+
+.img-12 {
+  width: 26vw;
+  margin-left: 80px;
+}
+
+.img-13 {
+  width: 26vw;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.img-14 {
+  width: 26vw;
+  margin-right: 80px;
+}
+
+.img-15 {
+  width: 26vw;
+  margin-left: 80px;
+}
+
+.img-16{
+  width: 26vw;
+  margin-left: 80px;
+  margin-right: 80px;
+
+}
+.img-17{
+  width: 26vw;
+  margin-right: 80px;
+}
 /* Modal styles */
 /* Modal styles */
 .modal {
@@ -86,10 +182,94 @@
     justify-content: center;
     text-align: center;
   }
-  .graphic-services img {
-    height: auto;
+  
+
+  .img-0 {
+    width: 90vw;
+    margin: 0;
+  }
+  
+  
+  .img-1 {
+    width: 90vw;
+    margin: 0;
+  }
+  
+  .img-2 {
+    width: 80vw;
+    margin: 0;
+  }
+  
+  .img-3 {
     width: 70vw;
-    padding: 0.5em;
-    max-width: 100%;
+    margin: 0;
+  }
+  
+  .img-4{
+    width: 70vw;
+    margin: 0;
+  }
+  .img-5{
+    width: 70vw;
+    margin: 0;
+  }
+  
+  
+  .img-6 {
+    width: 70vw;
+    margin: 0;
+  }
+  
+  .img-7 {
+    width: 70vw;
+    margin: 0;
+  }
+  
+  .img-8 {
+    width: 70vw;
+    margin: 0;
+  }
+  
+  .img-9 {
+    width: 90vw;
+    margin: 0;
+  }
+  
+  .img-10{
+    width: 90vw;
+    margin: 0;
+  }
+  .img-11{
+    width: 90vw;
+    margin: 0;
+  }
+  
+  .img-12 {
+    width: 90vw;
+    margin: 0;
+  }
+  
+  .img-13 {
+    width: 90vw;
+    margin: 0;
+  }
+  
+  .img-14 {
+    width: 90vw;
+    margin: 0;
+  }
+  
+  .img-15 {
+    width: 90vw;
+    margin: 0;
+  }
+  
+  .img-16{
+    width: 90vw;
+    margin: 0;
+  }
+  .img-17{
+    width: 90vw;
+    margin: 0;
   }
 }

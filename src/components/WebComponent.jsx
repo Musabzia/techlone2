@@ -70,10 +70,23 @@ const WebComponent = () => {
       <div className="web-container">
         <div className="web-services">
           {/* Heading */}
-          <Heading />
+          <Heading 
+                title="At Techlone" 
+                description="
+                We redefine digital presence through Website Design. We blend aesthetics with functionality,
+                 creating immersive online experiences. Our designs are more than just pixels;
+                they're gateways that engage and inspire."
+          />
           {[webImg1, webImg2, webImg3, webImg4, webImg5, webImg6, webImg7, webImg8].map((img, index) => (
             <a href="#!" key={index} onClick={() => openModal(img)}>
-              <img src={img} alt={`website ${index + 1}`} />
+              <img 
+
+                src={img}
+                alt={`website ${index + 1}`} 
+                data-aos="fade-up"
+                data-aos-duration="1000"
+
+               />
             </a>
           ))}
         </div>

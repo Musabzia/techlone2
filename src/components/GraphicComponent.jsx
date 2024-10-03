@@ -16,6 +16,7 @@ import graphicImg9 from '../img/graphic9.webp';
 import graphicImg10 from '../img/graphic10.webp';
 import graphicImg11 from '../img/graphic11.webp';
 import graphicImg12 from '../img/graphic12.webp';
+
 import graphicImg13 from '../img/graphic13.webp';
 import graphicImg14 from '../img/graphic14.webp';
 import graphicImg15 from '../img/graphic15.webp';
@@ -83,29 +84,37 @@ const GraphicComponent = () => {
       </div>
 
       <div className="graphic-container">
-        <div className="headings">
-          <h1>At Techlone</h1>
-          <p>Creativity meets strategy. Our designs aren't just visually stunning; they're crafted to amplify your brand's essence. We breathe life into ideas, translating them into captivating visuals that resonate and leave an indelible mark.</p>
-        </div>
+        <Heading 
+                title="At Techlone" 
+                description="
+                Creativity meets strategy. Our designs aren't just visually stunning;
+                they're crafted to amplify your brand's essence. We breathe life into ideas,
+                translating them into captivating visuals that resonate and leave an indelible mark."
+        />
 
         <div className="graphic-services">
 
-          {[graphicImg1, graphicImg2, graphicImg3, graphicImg4,
-            graphicImg5, graphicImg6, graphicImg7, graphicImg8,
-            graphicImg9, graphicImg10, graphicImg11, graphicImg12, 
-            graphicImg13,graphicImg14, graphicImg15, graphicImg16,
-            graphicImg17, graphicImg18,].map((img, index) => (
+        {[
+          graphicImg15,graphicImg16,graphicImg18, 
+          graphicImg5, graphicImg2, graphicImg3, 
+          graphicImg17, graphicImg14, graphicImg13,
+          graphicImg6, graphicImg10,  graphicImg12, 
+          graphicImg1,graphicImg7, graphicImg4, 
+          graphicImg11,graphicImg8, graphicImg9].map((img, index) => (
 
-            <a href="#!" key={index} onClick={() => openModal(img)}>
-
-              <img src={img} alt={`graphic ${index + 1}`} />
-
-              
-
-
-
-</a>
-          ))}
+  <a href="#!" key={index} onClick={() => openModal(img)}>
+    <img
+      src={img}
+      alt={`graphic ${index + 1}`}
+      className={`graphic-img img-${index}`} // Apply unique class per index
+    />
+    
+  </a>
+  
+  
+  
+))} 
+          </div>
           {/* Worktogether */}
           <Worktogether />
           
@@ -114,7 +123,7 @@ const GraphicComponent = () => {
 
           {/* Footer */}
           <Footer />
-          </div>
+          
 
         {modalOpen && (
           <div className="modal">

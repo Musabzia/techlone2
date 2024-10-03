@@ -2,7 +2,7 @@
     text-align: center;
     padding: 0px 0px 100px 0px;
     margin: 0 auto;
-    width: 120vh;
+    width: 80vw;
     color: #fff; /* Text color */
     
   }
@@ -22,7 +22,7 @@
   /* Responsive Styles */
   @media (max-width: 768px) {
     .headings{
-      width: 60vw;
+      width: 90vw;
       padding: 0px 0px 100px 0px;
     }
     .headings h1 {

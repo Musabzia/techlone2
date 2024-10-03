@@ -67,7 +67,14 @@ const AppComponent = () => {
       </div>
 
       <div className="app-container">
-        <Heading />
+              <Heading  
+              
+                title="At Techlone" 
+                description="Innovation meets mobility with Techlone Global's Mobile App Design.
+                 We architect intuitive interfaces that captivate. Our designs aren't just beautiful; 
+                they're crafted to enhance user experience, ensuring your app stands out in the palm of your users' hands."
+
+              />
 
         <div className="app-services">
           {[AppImg1, AppImg2, AppImg3, AppImg5, AppImg6].map((img, index) => (
