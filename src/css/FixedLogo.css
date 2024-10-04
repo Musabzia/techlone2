@@ -1,0 +1,13 @@
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.fixed-logo {
+    width: 35em; 
+    height: auto; 
+    cursor: pointer;
+    z-index: 99;
+}
+
+
+

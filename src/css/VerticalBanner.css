@@ -1,42 +1,69 @@
+.vertical-banner {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.vertical-banner::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+html, body, #root {
+  scroll-behavior: smooth;
+  height: 100%; /* Ensure full viewport height */
+  margin: 0; /* Remove any margin */
+  padding: 0;
+}
+
+.Logo-container {
+  position: relative;
+  left: 55%;
+  top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  scroll-snap-align: start;
+}
+
+.banner-content:nth-of-type(0) {
+  text-align: center;
+  position: relative;
+  
+  z-index: 10;  
+}
 
 
-  .vertical-banner {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-    /* Disable scrollbar on all browsers */
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Fill the section height */
+  
+}
+
+
+@media (max-width: 768px) {
+  .Logo-container {
+    display: none; /* Hide logo on smaller screens */
   }
 
-  .vertical-banner::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+  .banner-content h1 {
+    font-size: 3rem; /* Smaller title */
   }
 
-  html, body, #root {
-    scroll-behavior: smooth;
-    height: 100%; /* Ensure full viewport height */
-    margin: 0; /* Remove any margin */
-    
-    padding: 0;
-    margin: 0; /* Prevent any page-level scroll */
+  .banner-content p {
+    font-size: 1.5rem; /* Smaller description */
   }
-
-  /* Each section will take up the full viewport height */
-  .banner-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-
-    scroll-snap-align: start;
-  }
-
-  .banner-content{
-    text-align: center;
-  }
-
-  /* Add this CSS for the navigation dots */
-
+}

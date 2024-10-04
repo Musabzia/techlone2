@@ -1,13 +1,19 @@
-.rotating-logo {
-    width: 55px; /* Adjust the size as needed */
-    height: auto; /* Maintain aspect ratio */
-    animation: rotate 1.5s linear infinite; /* Apply rotation */
-    position: absolute;
-    margin-top: 20px;
-    margin-left: 20px;
-    cursor: pointer;
-    z-index: 99;
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+
+.rotating-logo {
+    width: 70px; 
+    height: auto; 
+    animation: rotate 3s linear infinite; 
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    top: 20px;
+    left: 20px;
+}
+
+
 
 @keyframes rotate {
     from {

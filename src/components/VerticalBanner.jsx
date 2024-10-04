@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-
 import GetInTouchForm from './GetInTouchForm.jsx';
 import NewsletterForm from './NewsletterForm.jsx';
 import '../css/VerticalBanner.css';
-import pic1 from '../img/blue.webp';
+import FixedLogo from '../components/FixedLogo.jsx';
+
+import pic1 from '../img/Blue.webp';
 import pic2 from '../img/bitcoin.webp';
 import pic3 from '../img/appcover.webp';
 import pic4 from '../img/web-cover.webp';
@@ -112,33 +113,37 @@ const VerticalBanner = () => {
   }, []);
 
   return (
-    <div className="vertical-banner" ref={bannerRef} style={{ height: '100vh', overflowY: 'scroll', scrollSnapType: 'y mandatory' }}>
-      {banners.map((banner) => (
+    <div className="vertical-banner" ref={bannerRef}>
+      {banners.map((banner, index) => (
         <section
-        key={banner.id}
-        className="banner-section snap-start"
-        style={{
-          backgroundImage: banner.imageUrl ? `url(${banner.imageUrl})` : 'none',
-          backgroundColor: banner.backgroundColor || 'transparent',
-          height: '100vh', // Full viewport height
-        }}
-      >
-        <div className="banner-content bg-black bg-opacity-50 p-6 rounded-md"> {/* Added classes for background */}
-          {banner.imageUrl ? (
-            <Link to={banner.link} className="banner-link">
-              <h1 className="text-5xl text-white font-bold">{banner.title}</h1>
-              <p className="text-4xl text-white mt-4">{banner.description}</p>
-            </Link>
-          ) : (
-            <>
-              <h1 className="text-5xl text-white font-bold">{banner.title}</h1>
-              <p className="text-4xl text-white mt-4">{banner.description}</p>
-              {banner.id === 8 && <GetInTouchForm />}
-              {banner.id === 9 && <NewsletterForm />}
-            </>
-          )}
-        </div>
-      </section>
+          key={banner.id}
+          className="banner-section snap-start"
+          style={{
+            backgroundImage: banner.imageUrl ? `url(${banner.imageUrl})` : 'none',
+            backgroundColor: banner.backgroundColor || 'transparent',
+            height: '100vh',
+          }}
+        >
+          {index === 0 && <div className='Logo-container'><FixedLogo /></div>}
+
+          <div className="banner-content bg-black bg-opacity-50 p-6 rounded-md ">
+            <div className="text-container ">
+              {banner.imageUrl ? (
+                <Link to={banner.link} className="banner-link">
+                  <h1 className="text-5xl text-white font-bold">{banner.title}</h1>
+                  <p className="text-4xl text-white mt-4">{banner.description}</p>
+                </Link>
+              ) : (
+                <>
+                  <h1 className="text-5xl text-white font-bold  ">{banner.title}</h1>
+                  <p className="text-4xl text-white mt-4 ">{banner.description}</p>
+                  {banner.id === 8 && <GetInTouchForm />}
+                  {banner.id === 9 && <NewsletterForm />}
+                </>
+              )}
+            </div>
+          </div>
+        </section>
       ))}
     </div>
   );
