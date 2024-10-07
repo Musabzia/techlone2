@@ -3,11 +3,22 @@ body {
 }
 
 .fixed-logo {
-    width: 35em; 
+    opacity: 0.2;
+    width: 20em; 
+    text-align: center;
     height: auto; 
+    animation: rotate 3s linear infinite; 
     cursor: pointer;
     z-index: 99;
 }
 
+@keyframes rotate {
+    from {
+        transform: rotate(0deg); /* Start at 0 degrees */
+    }
+    to {
+        transform: rotate(360deg); /* Rotate to 360 degrees */
+    }
+}
 
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import GetInTouchForm from './GetInTouchForm.jsx';
 import NewsletterForm from './NewsletterForm.jsx';
@@ -6,7 +6,7 @@ import '../css/VerticalBanner.css';
 import FixedLogo from '../components/FixedLogo.jsx';
 
 import pic1 from '../img/Blue.webp';
-import pic2 from '../img/bitcoin.webp';
+import pic2 from '../img/blockchaincover.webp';
 import pic3 from '../img/appcover.webp';
 import pic4 from '../img/web-cover.webp';
 import pic5 from '../img/twitchcover.webp';
@@ -81,6 +81,7 @@ const banners = [
 
 const VerticalBanner = () => {
   const bannerRef = useRef(null);
+  const [visibleBanners, setVisibleBanners] = useState(Array(banners.length).fill(false));
 
   useEffect(() => {
     const parent = bannerRef.current;
@@ -107,8 +108,28 @@ const VerticalBanner = () => {
 
     parent.addEventListener('wheel', handleWheel);
 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const index = Number(entry.target.getAttribute('data-index'));
+        if (entry.isIntersecting) {
+          setVisibleBanners((prev) => {
+            const newState = [...prev];
+            newState[index] = true;
+            return newState;
+          });
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const textElements = document.querySelectorAll('.typed-out-container');
+    textElements.forEach((el, index) => {
+      el.setAttribute('data-index', index); // Set data attribute for indexing
+      observer.observe(el);
+    });
+
     return () => {
-      parent.removeEventListener('wheel', handleWheel); // Cleanup
+      parent.removeEventListener('wheel', handleWheel);
+      observer.disconnect(); // Cleanup observer
     };
   }, []);
 
@@ -126,19 +147,29 @@ const VerticalBanner = () => {
         >
           {index === 0 && <div className='Logo-container'><FixedLogo /></div>}
 
-          <div className="banner-content bg-black bg-opacity-50 p-6 rounded-md ">
-            <div className="text-container ">
+          <div className="banner-content bg-opacity-50 p-6 text-center rounded-md">
+            <div className="text-container z-10">
               {banner.imageUrl ? (
-                <Link to={banner.link} className="banner-link">
-                  <h1 className="text-5xl text-white font-bold">{banner.title}</h1>
-                  <p className="text-4xl text-white mt-4">{banner.description}</p>
+                <Link to={banner.link} className="banner-link z-10">
+                  <h1 className="text-6xl text-shadow text-white font-bold">{banner.title}</h1>
+                  <div className="typed-out-container">
+                    <p className={`text-4xl text-shadow text-white mt-4 typed-out ${visibleBanners[index] ? 'animate' : ''}`}>
+                      {banner.description}
+                    </p>
+                  </div>
                 </Link>
               ) : (
                 <>
-                  <h1 className="text-5xl text-white font-bold  ">{banner.title}</h1>
-                  <p className="text-4xl text-white mt-4 ">{banner.description}</p>
-                  {banner.id === 8 && <GetInTouchForm />}
-                  {banner.id === 9 && <NewsletterForm />}
+                  <div className='z-10'>
+                    <h1 className="text-5xl  text-white font-bold text-center">{banner.title}</h1>
+                    
+                      <p className={`text-4xl text-white mt-4  ${visibleBanners[index] ? 'animate' : ''}`}>
+                        {banner.description}
+                      </p>
+                    
+                    {banner.id === 8 && <GetInTouchForm />}
+                    {banner.id === 9 && <NewsletterForm />}
+                  </div>
                 </>
               )}
             </div>

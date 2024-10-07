@@ -13,9 +13,9 @@ const WebCompSlider = ({ slides }) => {
             className={`slide ${slide.className}`}
             style={{ backgroundImage: `url(${slide.image})` }}
           >
-            {/* Add the overlay here */}
+            {/* Overlay for background blur */}
+            <div className="overlay"></div>
             <h1>{slide.title}</h1>
-           
           </Link>
         ))}
       </div>

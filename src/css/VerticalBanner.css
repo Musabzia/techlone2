@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+html, body{
+  font-family: "League Spartan", sans-serif;
+}
 .vertical-banner {
+  
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
@@ -18,10 +23,9 @@ html, body, #root {
 }
 
 .Logo-container {
-  position: relative;
-  left: 55%;
-  top: 5%;
-  display: flex;
+  position: absolute;
+  z-index: 1;
+ 
   justify-content: center;
   align-items: center;
 }
@@ -45,12 +49,35 @@ html, body, #root {
 
 
 .text-container {
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%; /* Fill the section height */
   
+}
+
+.typed-out {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  width: 0;
+  transition: width 0.5s ease; /* Smooth transition */
+}
+
+.typed-out.animate {
+  animation: typing 3s forwards, blink-caret 0.75s step-end infinite; /* Apply the typing and blinking animations */
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: orange; }
 }
 
 
