@@ -59,15 +59,15 @@ html, body, #root {
 
 .typed-out {
   overflow: hidden;
-  border-right: .15em solid orange;
+  border-right: .10em solid yellowgreen;
   white-space: nowrap;
   font-size: 1.6rem;
   width: 0;
-  transition: width 0.5s ease; /* Smooth transition */
+  transition: width 1 ease; /* Smooth transition */
 }
 
 .typed-out.animate {
-  animation: typing 3s forwards, blink-caret 0.75s step-end infinite; /* Apply the typing and blinking animations */
+  animation: typing 3s forwards, blink-caret 1s step-end infinite; /* Apply the typing and blinking animations */
 }
 
 @keyframes typing {

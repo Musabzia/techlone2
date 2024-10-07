@@ -19,48 +19,49 @@ const banners = [
     imageUrl: pic1,
     title: 'Welcome To,',
     description: "Techlone Global's Portfolio",
+    description2: 'Explore the Future of Innovation',
     link: '/',
   },
   {
     id: 2,
     imageUrl: pic2,
     title: 'Blockchain Development',
-    description: 'A place for your new NFTs collection',
+    description: 'Forge Your Digital Legacy with Stunning NFT Creations!',
     link: '/blockchain',
   },
   {
     id: 3,
     imageUrl: pic3,
     title: 'Application Development',
-    description: 'A modern mobile app of your idea',
+    description: 'Transform Your Vision into a Cutting-Edge Mobile Experience!',
     link: '/application',
   },
   {
     id: 4,
     imageUrl: pic4,
     title: 'Website Development',
-    description: 'A responsive website for your business',
+    description: 'Elevate Your Business with a Stunning, Responsive Website!',
     link: '/website',
   },
   {
     id: 5,
     imageUrl: pic5,
     title: 'Twitch Services',
-    description: 'Pump up your streaming experience',
+    description: 'Supercharge Your Stream with Our Expert Twitch Services!',
     link: '/twitch',
   },
   {
     id: 6,
     imageUrl: pic6,
     title: 'Graphic Designing',
-    description: 'Get ready for some stunning designs',
+    description: 'Unleash Your Brand’s Potential with Eye-Catching Designs!',
     link: '/graphics',
   },
   {
     id: 7,
     imageUrl: pic7,
     title: 'Illustrations',
-    description: 'Bring your ideas to life',
+    description: 'Transform Your Ideas into Captivating Visual Stories!',
     link: '/illustrations',
   },
   {
@@ -145,18 +146,20 @@ const VerticalBanner = () => {
             height: '100vh',
           }}
         >
-          {index === 0 && <div className='Logo-container'><FixedLogo /></div>}
+         
 
           <div className="banner-content bg-opacity-50 p-6 text-center rounded-md">
             <div className="text-container z-10">
               {banner.imageUrl ? (
                 <Link to={banner.link} className="banner-link z-10">
                   <h1 className="text-6xl text-shadow text-white font-bold">{banner.title}</h1>
+
                   <div className="typed-out-container">
                     <p className={`text-4xl text-shadow text-white mt-4 typed-out ${visibleBanners[index] ? 'animate' : ''}`}>
                       {banner.description}
                     </p>
                   </div>
+
                 </Link>
               ) : (
                 <>
