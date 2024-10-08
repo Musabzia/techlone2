@@ -26,7 +26,7 @@ const WebComponent = () => {
 
   const slides = [
     {
-      title: 'Twitch Services and Packages',
+      title: 'Twitch Services',
       image: twitchSlider, // Reference the imported image
       link: '/twitch',
       className: 'webdev',

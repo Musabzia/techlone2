@@ -42,7 +42,7 @@ const FooterComponent = () => {
         </a>
 
       </div>
-        <p>Copyright 2024 / All rights reserved <br/> Designed by <span><b> Techlone</b></span></p>
+        <p>Copyright 2024 / All rights reserved <br/> Designed by <b> <a href='https://techloneglobal.com/' target="_blank"> Techlone</a> </b> </p>
       </div>
     </footer>
   );

@@ -74,7 +74,11 @@ footer {
   color: #007BFF;
 }
 
-.socialapp p {
+.socialapp p  {
+  margin-top: 10px;
+  font-size: 0.8em;
+}
+.socialapp p  a{
   margin-top: 10px;
   font-size: 0.8em;
 }

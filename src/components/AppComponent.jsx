@@ -31,7 +31,7 @@ const AppComponent = () => {
       className: 'webdev',
     },
     {
-      title: 'Artwork and Graphic Designing',
+      title: 'Graphic Designing',
       image: GraphicBackground,
       link: '/graphics',
       className: 'graphic',

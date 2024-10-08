@@ -37,7 +37,7 @@ import Worktogether from './Worktogether';
 
 const slides = [
   {
-    title: 'Illustration and Digital Sketches',
+    title: 'Illustrations',
     image: illustrationBackground,
     link: '/illustrations',
     className: 'webdev',

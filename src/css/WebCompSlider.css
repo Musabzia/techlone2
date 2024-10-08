@@ -20,7 +20,7 @@
   background-size: cover;
   background-position: 10px;
   background-repeat: no-repeat;
-  height: 200px;
+  height: 150px;
   width: 50%;
   position: relative;
   transition: transform 0.5s ease, z-index 0.5s ease, width 0.5s ease, opacity 0.5s ease;

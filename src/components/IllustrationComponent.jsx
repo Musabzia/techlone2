@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../css/Illustration.css'; 
 
 import illustrationBackground from '../img/illustrationcover.webp';
-import BlockBackground from '../img/bitcoin.webp';
+import BlockBackground from '../img/blockchaincover.webp';
 import twitchBackground from '../img/twitchcover.webp';
 import illustrationImg1 from '../img/Illustration1.webp';
 import illustrationImg2 from '../img/Illustration2.webp';
@@ -57,7 +57,7 @@ const IllustrationComponent = () => {
       className: 'webdev',
     },
     {
-      title: 'Twitch Services and Packages',
+      title: 'Twitch Services',
       image: twitchBackground,
       link: '/twitch',
       className: 'graphic',

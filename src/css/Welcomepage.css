@@ -1,0 +1,22 @@
+.back-container {
+    position: relative;
+    text-align: center;
+    color: white; /* Adjust color as needed */
+    background-image: url('path/to/your/background.jpg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.back-image {
+    width: 100%;
+    height: auto;
+}
+
+.stroke-text {
+    font-size: 4rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px black; /* Adjust stroke color and width */
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+}

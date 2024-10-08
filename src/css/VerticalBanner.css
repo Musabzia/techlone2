@@ -3,7 +3,9 @@ html, body{
   font-family: "League Spartan", sans-serif;
 }
 .vertical-banner {
-  
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
@@ -77,7 +79,7 @@ html, body, #root {
 
 @keyframes blink-caret {
   0%, 100% { border-color: transparent; }
-  50% { border-color: orange; }
+  50% { border-color: rgb(0, 102, 255); }
 }
 
 
@@ -85,12 +87,43 @@ html, body, #root {
   .Logo-container {
     display: none; /* Hide logo on smaller screens */
   }
-
+  .banner-content{
+    width: 50vh;
+  }
   .banner-content h1 {
-    font-size: 3rem; /* Smaller title */
+    font-size: 2.5rem; /* Smaller title */
   }
-
   .banner-content p {
-    font-size: 1.5rem; /* Smaller description */
+    font-size: 1rem; /* Smaller description */
   }
+  
+  
+}
+.vertical-banner-wrapper {
+  position: relative;
+}
+
+.vertical-dots {
+  position: fixed;
+  right: 10px; /* Adjust as needed */
+  bottom: 0%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  background-color: #ddd;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  transform: scale(1.5);
+  background-color: #4794ff;
 }

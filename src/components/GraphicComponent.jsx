@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Graphic.css';
 import GraphicBackground from '../img/graphiccover.webp';
-import BlockBackground from '../img/bitcoin.webp';
+import BlockBackground from '../img/blockchaincover.webp';
 import AppBackground from '../img/AppCover.webp';
 
 import graphicImg1 from '../img/graphic1.webp';

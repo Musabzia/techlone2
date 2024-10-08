@@ -34,12 +34,10 @@
   width: 70vw; /* Set width for images */
   height: auto;
   padding: 5px 1em;
-  transition: transform 0.4s ease-in-out;
+
 }
 
-.block-services img:hover {
-  transform: scale(1.1); /* Hover effect */
-}
+
 
 /* Modal styles */
 /* Modal styles */
@@ -95,6 +93,6 @@
 }
 
 
-.hover img:hover{
-  transform: scale(1.1); /* Hover effect */
+.block-img img:hover{
+transform: scale(1.2);
 }
