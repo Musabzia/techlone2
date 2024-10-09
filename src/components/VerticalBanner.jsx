@@ -10,24 +10,17 @@ import pic4 from '../img/web-cover.webp';
 import pic5 from '../img/twitchcover.webp';
 import pic6 from '../img/graphiccover.webp';
 import pic7 from '../img/illustrationcover.webp';
+import WelcomePage from '../components/Welcomepage.jsx';
 
 const banners = [
   { id: 1, imageUrl: pic1, title: 'Welcome!', description: "To Techlone Global's Portfolio", link: '/' },
-
-  { id: 2, imageUrl: pic2, title: 'Blockchain Development', description: 'Unlock the future of creativity with our blockchain development solutions', link: '/blockchain' },
-
+  { id: 2, imageUrl: pic2, title: 'Blockchain Development', description: 'Revolutionize your creativity with our blockchain services', link: '/blockchain' },
   { id: 3, imageUrl: pic3, title: 'Application Development', description: 'Transform Your Vision into a Cutting-Edge Mobile Experience', link: '/application' },
-
   { id: 4, imageUrl: pic4, title: 'Website Development', description: 'Elevate Your Business with a Stunning, Responsive Website', link: '/website' },
-
   { id: 5, imageUrl: pic5, title: 'Twitch Services', description: 'Supercharge Your Stream with Our Expert Twitch Services', link: '/twitch' },
-
   { id: 6, imageUrl: pic6, title: 'Graphic Designing', description: 'Unleash Your Brand’s Potential with Eye-Catching Designs', link: '/graphics' },
-
   { id: 7, imageUrl: pic7, title: 'Illustrations', description: 'Transform Your Ideas into Captivating Visual Stories', link: '/illustrations' },
-
   { id: 8, backgroundColor: '#000', title: 'Get in Touch', description: 'Fill out the form below to contact us', isBlankBanner: true },
-
   { id: 9, backgroundColor: '#000', title: 'Newsletter', description: 'Subscribe to our newsletter', isBlankBanner: true },
 ];
 
@@ -76,7 +69,7 @@ const VerticalBanner = () => {
 
   return (
     <div className="vertical-banner-wrapper">
-      <div className="vertical-banner" ref={bannerRef} style={{ height: '100vh', overflowY: 'scroll', scrollSnapType: 'y mandatory' }}>
+      <div className="vertical-banner" ref={bannerRef}>
         {banners.map((banner, index) => (
           <section
             key={banner.id}
@@ -87,8 +80,10 @@ const VerticalBanner = () => {
               height: '100vh',
             }}
           >
-            <div className="banner-content bg-opacity-50 p-6 text-center rounded-md">
-              {banner.imageUrl ? (
+            <div className="banner-content bg-opacity-50 p-6 text-center rounded-md md:text-left">
+              {banner.id === 1 ? (
+                <WelcomePage />
+              ) : (
                 <Link to={banner.link} className="banner-link">
                   <h1 className="text-6xl text-shadow text-white font-bold">{banner.title}</h1>
                   <div className="typed-out-container">
@@ -97,16 +92,9 @@ const VerticalBanner = () => {
                     </p>
                   </div>
                 </Link>
-              ) : (
-                <div className='z-10'>
-                  <h1 className="text-5xl text-white font-bold text-center">{banner.title}</h1>
-                  <p className={`text-4xl text-white mt-4 ${activeIndex === index ? 'animate' : ''}`}>
-                    {banner.description}
-                  </p>
-                  {banner.id === 8 && <GetInTouchForm />}
-                  {banner.id === 9 && <NewsletterForm />}
-                </div>
               )}
+              {banner.id === 8 && <GetInTouchForm />}
+              {banner.id === 9 && <NewsletterForm />}
             </div>
           </section>
         ))}

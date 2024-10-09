@@ -1,16 +1,28 @@
-import React from "react";
-import backgroundimg from "../img/Blue.webp"; // Ensure the path is correct
+import React, { useEffect, useState } from "react";
 import '../css/Welcomepage.css';
 
+const WelcomePage = () => {
+    const [animate, setAnimate] = useState(false);
 
-const Background = () => {
-    return ( // Add return statement here
+    useEffect(() => {
+        // Trigger the animation after the component mounts
+        const timer = setTimeout(() => {
+            setAnimate(true);
+        }, 100); // Delay to allow the initial render
+
+        return () => clearTimeout(timer); // Cleanup
+    }, []);
+
+    return (
         <div className="back-container">
-            
-            <h1 className="stroke-text">Techlone Global</h1>
-            <p>Your Web Solutions Expertise</p>
+           <a href="/">
+           <h1 className="stroke-text">Welcome</h1>
+           </a> 
+            <p className={`typed-out ${animate ? 'animate' : ''}`}>
+                To Techlone Global's Portfolio
+            </p>
         </div>
     );
 };
 
-export default Background;
+export default WelcomePage;
