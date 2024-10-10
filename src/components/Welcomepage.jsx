@@ -16,7 +16,7 @@ const WelcomePage = () => {
     return (
         <div className="back-container">
            <a href="/">
-           <h1 className="stroke-text">Welcome</h1>
+           <h2 className="stroke-text">Welcome</h2>
            </a> 
             <p className={`typed-out ${animate ? 'animate' : ''}`}>
                 To Techlone Global's Portfolio

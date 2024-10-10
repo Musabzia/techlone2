@@ -12,21 +12,18 @@
 }
 
 .stroke-text {
-    font-size: 4rem; /* Adjust size as needed */
+    font-size: 6rem;
     font-weight: bold;
     color: transparent;
     -webkit-text-stroke: 2px white; /* Adjust stroke color and width */
 }
 
 
-p {
-    font-size: 1.5rem; /* Adjust paragraph size as needed */
-    margin-top: 1rem; /* Space between title and paragraph */
-}
+
 
 .typed-out {
     overflow: hidden; /* Ensures the text doesn't overflow */
-    border-right: .10em solid yellowgreen; /* Cursor effect */
+    border-right: .0em solid rgb(0, 0, 0); /* Cursor effect */
     white-space: nowrap; /* Prevents wrapping */
     font-size: 1.6rem; /* Adjust size as needed */
     width: 0; /* Start with width 0 for the animation */
@@ -34,6 +31,7 @@ p {
 }
 
 .typed-out.animate {
+    font-size: 2rem;
     animation: typing 3s forwards, blink-caret 1.5s step-end infinite; /* Typing and blinking animations */
 }
 
@@ -44,4 +42,10 @@ p {
 
 @keyframes blink-caret {
     50% { border-color: transparent; }
+}
+
+@media (max-width: 768px){
+   .typed-out.animate{
+    font-size: 1.5rem;
+   }
 }

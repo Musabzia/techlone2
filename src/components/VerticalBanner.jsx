@@ -20,8 +20,8 @@ const banners = [
   { id: 5, imageUrl: pic5, title: 'Twitch Services', description: 'Supercharge Your Stream with Our Expert Twitch Services', link: '/twitch' },
   { id: 6, imageUrl: pic6, title: 'Graphic Designing', description: 'Unleash Your Brand’s Potential with Eye-Catching Designs', link: '/graphics' },
   { id: 7, imageUrl: pic7, title: 'Illustrations', description: 'Transform Your Ideas into Captivating Visual Stories', link: '/illustrations' },
-  { id: 8, backgroundColor: '#000', title: 'Get in Touch', description: 'Fill out the form below to contact us', isBlankBanner: true },
-  { id: 9, backgroundColor: '#000', title: 'Newsletter', description: 'Subscribe to our newsletter', isBlankBanner: true },
+  { id: 8, backgroundColor: '#000', title: 'Get in Touch', description: '', isBlankBanner: true },
+  { id: 9, backgroundColor: '#000', title: 'Newsletter', description: '', isBlankBanner: true },
 ];
 
 const VerticalBanner = () => {
@@ -87,7 +87,7 @@ const VerticalBanner = () => {
                 <Link to={banner.link} className="banner-link">
                   <h1 className="text-6xl text-shadow text-white font-bold">{banner.title}</h1>
                   <div className="typed-out-container">
-                    <p className={`text-4xl text-shadow text-white mt-4 typed-out ${activeIndex === index ? 'animate' : ''}`}>
+                    <p className={`text-4xl text-shadow text-white mt-4 write-out ${activeIndex === index ? 'animate' : ''}`}>
                       {banner.description}
                     </p>
                   </div>

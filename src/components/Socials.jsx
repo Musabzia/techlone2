@@ -4,16 +4,16 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/f
 const Socials = () => {
   return (
     <div className="social-icons">
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.facebook.com/techlonglobal" target="_blank" rel="noopener noreferrer">
         <FaFacebookF />
       </a>
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://x.com/Techlone_Global" target="_blank" rel="noopener noreferrer">
         <FaTwitter />
       </a>
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/company/techlone-global/" target="_blank" rel="noopener noreferrer">
         <FaLinkedinIn />
       </a>
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.instagram.com/techloneglobal_/" target="_blank" rel="noopener noreferrer">
         <FaInstagram />
       </a>
     </div>

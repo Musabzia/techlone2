@@ -91,8 +91,7 @@ const BlockchainComponent = () => {
             Whether you're a startup exploring blockchain opportunities or an established 
             enterprise seeking to optimize your operations, we have the expertise and resources
             to bring your vision to life. Get in touch with us today to discuss your blockchain
-            project requirements and take the first step towards innovation and success.they're
-            gateways that engage and inspire."
+            project requirements and take the first step towards innovation and success."
         />
 
         {/* Centered grid layout for images */}

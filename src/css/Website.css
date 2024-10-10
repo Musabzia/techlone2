@@ -17,6 +17,25 @@
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   text-align: center;
 }
+.webtitle-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha for the desired shade */
+  z-index: 1; /* Place overlay behind the text */
+}
+
+.webtitle-img h1 {
+  font-size: 6rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  z-index: 2; /* Bring the title in front of the overlay */
+}
+
 
 .web-container {
   padding: 100px 0px;

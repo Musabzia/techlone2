@@ -9,7 +9,7 @@ const Worktogether = () => {
     <div className="oval">
       
 
-      <a className="worktogether" href="https://techloneglobal.com/">
+      <a className="worktogether" target='_blank' href="https://techloneglobal.com/contact/">
         <h1>Let's work together</h1>
       </a>
 

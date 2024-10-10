@@ -17,6 +17,7 @@
   line-height: 90px; /* Ensured proper spacing */
 }
 
+
 .block-container {
   padding: 100px 0px;
   background-color: black; /* Background for the container */
@@ -34,7 +35,7 @@
   width: 70vw; /* Set width for images */
   height: auto;
   padding: 5px 1em;
-
+  
 }
 
 

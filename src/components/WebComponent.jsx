@@ -73,7 +73,7 @@ const WebComponent = () => {
           <Heading 
                 title="At Techlone" 
                 description="
-                We redefine digital presence through Website Design. We blend aesthetics with functionality,
+                We redefine digital presence through our website designs. We blend aesthetics with functionality,
                  creating immersive online experiences. Our designs are more than just pixels;
                 they're gateways that engage and inspire."
           />

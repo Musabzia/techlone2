@@ -107,6 +107,7 @@ const GraphicComponent = () => {
       src={img}
       alt={`graphic ${index + 1}`}
       className={`graphic-img img-${index}`} // Apply unique class per index
+      data-aos='fade-up' data-aos-duration="1500"
     />
     
   </a>

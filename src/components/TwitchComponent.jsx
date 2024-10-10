@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import '../css/twitch.css';
 import illustrationBackground from '../img/illustrationcover.webp';
 import webcover from '../img/web-cover.webp';
 import twitchBackground from '../img/twitchcover.webp';
@@ -94,7 +94,7 @@ const TwitchComponent = () => {
   return (
     <>
       <LogoAnime />
-      <div className="relative flex items-center justify-center h-screen bg-cover bg-center text-white" style={{ backgroundImage: `url(${twitchBackground})` }}>
+      <div className="twitchtitle-img relative flex items-center justify-center h-screen bg-cover bg-center text-white" style={{ backgroundImage: `url(${twitchBackground})` }}>
   <h1 
     data-aos='fade-up' 
     data-aos-easing="linear" 
@@ -110,7 +110,7 @@ const TwitchComponent = () => {
         <Heading 
                 title="At Techlone" 
                 description="
-                Transform your Twitch channel with our all-inclusive package.
+                Transform your Twitch channel with our all-inclusive Twitch artwork packages.
                 Gain custom overlays and graphics that capture your brand's essence.
                 Manage your stream effortlessly with our tools, engage your audience with proven strategies,
                 and track growth with in-depth analytics. Elevate every aspect of your stream and fuel its success!"
