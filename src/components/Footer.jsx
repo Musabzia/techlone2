@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     
      <div className='footer'>
-        <p> 2024 <a href="https://techloneglobal.com/" target="_blank">
-        <b>Techlone.</b>
-        </a> All rights reserved.</p>
+        <p> 2024 <b> <a href="https://techloneglobal.com/" target="_blank">
+        Techlone.
+        </a></b> All rights reserved.</p> 
         </div>
  
   );
