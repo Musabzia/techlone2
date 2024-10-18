@@ -10,15 +10,17 @@ import pic4 from '../img/web-cover.webp';
 import pic5 from '../img/twitchcover.webp';
 import pic6 from '../img/graphiccover.webp';
 import pic7 from '../img/illustrationcover.webp';
+import pic8 from '../img/SocialMediaCover.png';
 import WelcomePage from '../components/Welcomepage.jsx';
 
 const banners = [
   { id: 1, imageUrl: pic1, title: 'Welcome!', description: "To Techlone Global's Portfolio", link: '/' },
-  { id: 2, imageUrl: pic2, title: 'Blockchain Development', description: 'Revolutionize your creativity with our blockchain services', link: '/blockchain' },
-  { id: 3, imageUrl: pic3, title: 'Application Development', description: 'Transform Your Vision into a Cutting-Edge Mobile Experience', link: '/application' },
+  { id: 6, imageUrl: pic6, title: 'Graphic Designing', description: 'Unleash Your Brand’s Potential with Eye-Catching Designs', link: '/graphics' },
+  { id: 10, imageUrl: pic8, title: 'Social Media Marketing', description: 'Boost your brand with targeted social media campaigns.', link: '/marketing' },
   { id: 4, imageUrl: pic4, title: 'Website Development', description: 'Elevate Your Business with a Stunning, Responsive Website', link: '/website' },
   { id: 5, imageUrl: pic5, title: 'Twitch Services', description: 'Supercharge Your Stream with Our Expert Twitch Services', link: '/twitch' },
-  { id: 6, imageUrl: pic6, title: 'Graphic Designing', description: 'Unleash Your Brand’s Potential with Eye-Catching Designs', link: '/graphics' },
+  { id: 2, imageUrl: pic2, title: 'Blockchain Development', description: 'Revolutionize your creativity with our blockchain services', link: '/blockchain' },
+  { id: 3, imageUrl: pic3, title: 'Application Development', description: 'Transform Your Vision into a Cutting-Edge Mobile Experience', link: '/application' },
   { id: 7, imageUrl: pic7, title: 'Illustrations', description: 'Transform Your Ideas into Captivating Visual Stories', link: '/illustrations' },
   { id: 8, backgroundColor: '#000', title: 'Get in Touch', description: '', isBlankBanner: true },
   { id: 9, backgroundColor: '#000', title: 'Newsletter', description: '', isBlankBanner: true },

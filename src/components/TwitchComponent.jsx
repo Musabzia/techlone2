@@ -269,10 +269,10 @@ const TwitchComponent = () => {
         <Footer />
 
         {modalOpen && (
-  <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-80 cursor-pointer p-4">
-    <span className="absolute top-5 right-5 text-2xl text-white cursor-pointer transition-transform duration-300 hover:scale-125" onClick={closeModal}>
-      <FontAwesomeIcon icon={faTimes} />
-    </span>
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-80 cursor-pointer p-4">
+        <span className="absolute top-5 right-5 text-2xl text-white cursor-pointer transition-transform duration-300 hover:scale-125" onClick={closeModal}>
+        <FontAwesomeIcon icon={faTimes} />
+        </span>
 
     <img
       className="max-w-[90vw] max-h-[90vh] h-auto cursor-auto object-contain"

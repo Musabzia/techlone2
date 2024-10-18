@@ -26,7 +26,7 @@ import LogoAnime from './LogoAnime';
 import Worktogether from './Worktogether';
 import Slider from './WebCompSlider';
 import Heading from '../components/Heading';
-import TestScale from './Tester';
+
 
 const slides = [
   {
@@ -72,7 +72,7 @@ const BlockchainComponent = () => {
       
       <LogoAnime />
       <div
-        className="relative flex items-center justify-center h-screen bg-contain bg-center text-white"
+        className="relative flex items-center justify-center h-screen  bg-center text-white"
         style={{ backgroundImage: `url(${BlockBackground})` }}
       >
         <h1 data-aos='fade-up' 

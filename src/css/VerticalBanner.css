@@ -5,9 +5,11 @@ html, body {
 }
 
 .vertical-banner {
+  overflow-y: auto;
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
-  overflow: hidden;
+  
   scroll-snap-type: y mandatory;
   height: 100vh;
   -ms-overflow-style: none; /* IE and Edge */
@@ -116,8 +118,10 @@ html, body, #root {
 @media (max-width: 768px) {
   .banner-content h1 {
     font-size: 2em;
+    padding: 0em 1em;
   }
   .banner-content p {
     font-size: 1em;
+    padding: 0em 2em;
   }
 }

@@ -21,6 +21,8 @@
     "animated-cursor": "^1.2.0",
     "aos": "^2.3.4",
     "debounce": "^2.1.1",
+    "emailjs": "^4.0.3",
+    "emailjs-com": "^3.2.0",
     "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

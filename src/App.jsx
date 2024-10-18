@@ -10,9 +10,11 @@ import Application from './pages/Application';
 import Graphics from './pages/Graphics';
 import Blockchain from './pages/Blockchain';
 import Illustrations from './pages/Illustrations';
+import MarketingPage from './pages/Marketing';
 
-import AOS from 'aos';
+
 import 'aos/dist/aos.css';
+
 
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
           <Route path="/graphics" element={<Graphics />} />
           <Route path="/blockchain" element={<Blockchain />} />
           <Route path="/illustrations" element={<Illustrations />} />
+          <Route path="/marketing" element={<MarketingPage/>} />
         </Routes>
       </div>
     </Router>
