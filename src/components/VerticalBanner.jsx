@@ -10,7 +10,7 @@ import pic4 from '../img/web-cover.webp';
 import pic5 from '../img/twitchcover.webp';
 import pic6 from '../img/graphiccover.webp';
 import pic7 from '../img/illustrationcover.webp';
-import pic8 from '../img/SocialMediaCover.png';
+import pic8 from '../img/SocialMediaCover.webp';
 import WelcomePage from '../components/Welcomepage.jsx';
 
 const banners = [

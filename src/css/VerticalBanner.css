@@ -69,13 +69,15 @@ html, body, #root {
 }
 
 .banner-content h1 {
+  font-size: 3.5em; /* Default for larger screens */
+  padding: 0em 2em;
   text-align: center;
-  font-size: 4em;
 }
 
 .banner-content p {
-  text-align: center;
   font-size: 2em;
+  padding: 0em 2em;
+  line-height: 1.5em; /* Proper spacing between lines */
 }
 
 .dot {
@@ -100,6 +102,13 @@ html, body, #root {
   width: 0; /* Start with width 0 for the animation */
   transition: width 1s ease-in-out; /* Smooth transition */
 }
+.write-out p{
+  overflow: hidden; /* Ensures the text doesn't overflow */
+  border-right: 0em solid yellowgreen; /* Cursor effect */ /* Prevents wrapping */
+  font-size: 1.6rem; /* Adjust size as needed */
+  width: 0; /* Start with width 0 for the animation */
+  transition: width 1s ease-in-out; /* Smooth transition */
+}
 
 .write-out.animate {
   animation: typing 3s forwards, blink-caret 0.75s step-end infinite; /* Typing and blinking animations */
@@ -114,13 +123,54 @@ html, body, #root {
   50% { border-color: transparent; }
 }
 
+/* Medium devices (tablets) */
 @media (max-width: 768px) {
   .banner-content h1 {
-    font-size: 2em;
+    font-size: 2.5em; /* Smaller size for tablets */
+    padding: 0em 1.5em;
+  }
+  .banner-content p {
+    font-size: 1.5em;
+    padding: 0em 1.5em;
+    line-height: 1.4em;
+  }
+}
+
+/* Small devices (mobile phones up to 480px) */
+@media (max-width: 480px) {
+  .banner-content h1 {
+    font-size: 1.7em; /* Reduced size for mobiles */
     padding: 0em 1em;
   }
   .banner-content p {
-    font-size: 1em;
-    padding: 0em 2em;
+    font-size: 0.9em; /* Reduced size for mobiles */
+    padding: 0.5em 1em;
+    line-height: 1.3em;
+  }
+}
+
+/* Extra small devices (iPhone SE or smaller, up to 375px) */
+@media (max-width: 375px) {
+  .banner-content h1 {
+    font-size: 1.6em; /* Adjusted size for iPhone SE */
+    padding: 0em 0.8em;
+  }
+  .banner-content p {
+    font-size: 0.8em; /* Adjusted size for iPhone SE */
+    padding: 0.5em 0.8em;
+    line-height: 1.2em;
+  }
+}
+
+/* Ultra-small devices (older smartphones, up to 320px) */
+@media (max-width: 320px) {
+  .banner-content h1 {
+    font-size: 1.3em; /* Smallest size for ultra-small devices */
+    padding: 0em 0.5em;
+  }
+  .banner-content p {
+    font-size: 0.7em; /* Smallest size for ultra-small devices */
+    padding: 0.5em 0.5em;
+    line-height: 1.2em;
   }
 }
