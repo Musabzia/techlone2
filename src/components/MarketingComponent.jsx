@@ -90,10 +90,11 @@ const MarketingComponent = () => {
 
             <Helmet>
                 <title>Techlone Global - Social Media Marketing</title>
-                <meta property="og:title" content="Techlone Global" />
+                <meta name="description" content="Boost your brand with targeted social media campaigns." />
+                <meta property="og:title" content="Techlone Global - Social Media Marketing" />
                 <meta property="og:description" content="Boost your brand with targeted social media campaigns." />
-                <meta property="og:image" content="https://portfolio.techloneglobal.com/SocialMediaCover.png" />
-                <meta property="og:url" content="https://portfolio.techloneglobal.com" />
+                <meta property="og:image" content="https://portfolio.techloneglobal.com/src/img/Covers/Marketing-Cover.webp" />
+    <meta property="og:url" content="https://portfolio.techloneglobal.com" />
                 <meta property="og:type" content="website" />
             </Helmet>
 

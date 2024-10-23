@@ -69,7 +69,7 @@ const AppComponent = () => {
       <Helmet>
         <meta property="og:title" content="Techlone Global" />
         <meta property="og:description" content="Transform Your Vision into a Cutting-Edge Mobile Experience." />
-        <meta property="og:image" content="https://portfolio.techloneglobal.com/AppCover.webp" />
+        <meta property="og:image" content="https://portfolio.techloneglobal.com/App-Cover.webp" />
         <meta property="og:url" content="https://portfolio.techloneglobal.com" />
         <meta property="og:type" content="website" />
       </Helmet>
