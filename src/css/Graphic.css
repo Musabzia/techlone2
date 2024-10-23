@@ -28,13 +28,16 @@
   text-align: center;
   z-index: 2; /* Bring the title in front of the overlay */
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 
 .graphic-container {
-  padding: 100px 0px;
+  padding: 0px 0px 100px 0px;
   overflow: hidden;
   background-color: black;
   color: aliceblue;
+  
 }
 
 .graphic-services {

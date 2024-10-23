@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../css/twitch.css';
+import { Helmet } from 'react-helmet';
 import illustrationBackground from '../img/illustrationcover.webp';
-import webcover from '../img/web-cover.webp';
+import BlockBackground from '../img/blockchaincover.webp';
 import twitchBackground from '../img/twitchcover.webp';
 import twitchImg1 from '../img/twitch1.webp';
 import twitchImg2 from '../img/twitch1-2.webp';
@@ -43,9 +44,9 @@ const slides = [
     className: 'webdev',
   },
   {
-    title: 'Website Development',
-    image: webcover,
-    link: '/website',
+    title: 'Blockchain Development',
+    image: BlockBackground,
+    link: '/Blockchain',
     className: 'graphic',
   },
 ];
@@ -93,6 +94,15 @@ const TwitchComponent = () => {
 
   return (
     <>
+
+      <Helmet>
+        <meta property="og:title" content="Techlone Global" />
+        <meta property="og:description" content="Supercharge Your Stream with Our Expert Twitch Services." />
+        <meta property="og:image" content="https://portfolio.techloneglobal.com/twitchcover.webp" />
+        <meta property="og:url" content="https://portfolio.techloneglobal.com" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       <LogoAnime />
       <div className="twitchtitle-img relative flex items-center justify-center h-screen bg-cover bg-center text-white" style={{ backgroundImage: `url(${twitchBackground})` }}>
   <h1 

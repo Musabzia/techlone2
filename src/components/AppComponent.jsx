@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Application.css';
-
+import { Helmet } from 'react-helmet';
 import AppBackground from '../img/AppCover.webp';
 import webcover from '../img/web-cover.webp';
 import GraphicBackground from '../img/graphiccover.webp';
@@ -65,6 +65,15 @@ const AppComponent = () => {
 
   return (
     <>
+
+      <Helmet>
+        <meta property="og:title" content="Techlone Global" />
+        <meta property="og:description" content="Transform Your Vision into a Cutting-Edge Mobile Experience." />
+        <meta property="og:image" content="https://portfolio.techloneglobal.com/AppCover.webp" />
+        <meta property="og:url" content="https://portfolio.techloneglobal.com" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       <LogoAnime />
       <div className="app">
         <div className="apptitle-img" style={{ backgroundImage: `url(${AppBackground})` }}>

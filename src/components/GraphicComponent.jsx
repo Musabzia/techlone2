@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Graphic.css';
+import { Helmet } from 'react-helmet';
 import GraphicBackground from '../img/graphiccover.webp';
-import BlockBackground from '../img/blockchaincover.webp';
+import illustrationBackground from '../img/illustrationcover.webp';
 import AppBackground from '../img/AppCover.webp';
 
 import graphicImg1 from '../img/graphic1.webp';
@@ -48,9 +49,9 @@ const GraphicComponent = () => {
       className: 'webdev',
     },
     {
-      title: 'Blockchain Development',
-      image: BlockBackground, // Reference the imported image
-      link: '/blockchain',
+      title: 'Illustrations',
+      image: illustrationBackground, // Reference the imported image
+      link: '/illustrations',
       className: 'graphic',
     },
   ];
@@ -78,12 +79,21 @@ const GraphicComponent = () => {
 
   return (
     <>
+
+      <Helmet>
+        <meta property="og:title" content="Techlone Global" />
+        <meta property="og:description" content="Unleash Your Brand’s Potential with Eye-Catching Designs." />
+        <meta property="og:image" content="https://portfolio.techloneglobal.com/graphiccover.webp" />
+        <meta property="og:url" content="https://portfolio.techloneglobal.com" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+    <div className="graphic-container">
       <LogoAnime />
       <div className="graphictitle-img" style={{ backgroundImage: `url(${GraphicBackground})` }}>
         <h1 data-aos='fade-up' data-aos-easing="linear" data-aos-duration="1000">Graphic Designing</h1>
       </div>
 
-      <div className="graphic-container">
+      
         <Heading 
                 title="At Techlone" 
                 description="

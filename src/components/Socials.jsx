@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa'; // Import social media icons
+import { FaFacebookF,FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6"; // Import social media icons
 
 const Socials = () => {
   return (
@@ -8,7 +9,7 @@ const Socials = () => {
         <FaFacebookF />
       </a>
       <a href="https://x.com/Techlone_Global" target="_blank" rel="noopener noreferrer">
-        <FaTwitter />
+        <FaXTwitter />
       </a>
       <a href="https://www.linkedin.com/company/techlone-global/" target="_blank" rel="noopener noreferrer">
         <FaLinkedinIn />

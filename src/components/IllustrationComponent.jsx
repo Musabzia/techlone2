@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Illustration.css'; 
-
+import { Helmet } from 'react-helmet';
 import illustrationBackground from '../img/illustrationcover.webp';
-import BlockBackground from '../img/blockchaincover.webp';
+import GraphicBackground from '../img/graphiccover.webp';
 import twitchBackground from '../img/twitchcover.webp';
 import illustrationImg1 from '../img/Illustration1.webp';
 import illustrationImg2 from '../img/Illustration2.webp';
@@ -51,9 +51,9 @@ const IllustrationComponent = () => {
 
   const slides = [
     {
-      title: 'Blockchain Development',
-      image: BlockBackground,
-      link: '/blockchain',
+      title: 'Graphic Designing',
+      image: GraphicBackground,
+      link: '/Graphics',
       className: 'webdev',
     },
     {
@@ -70,6 +70,15 @@ const IllustrationComponent = () => {
 
   return (
     <>
+
+      <Helmet>
+        <meta property="og:title" content="Techlone Global" />
+        <meta property="og:description" content="Transform Your Ideas into Captivating Visual Stories" />
+        <meta property="og:image" content="https://portfolio.techloneglobal.com/illustrationcover.webp" />
+        <meta property="og:url" content="https://portfolio.techloneglobal.com" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      
       <LogoAnime />
       <div 
         className="illustrationtitle-img" 

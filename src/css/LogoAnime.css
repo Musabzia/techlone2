@@ -3,7 +3,7 @@ body {
 }
 
 .rotating-logo {
-    width: 70px; 
+    width: 60px; 
     height: auto; 
     animation: rotate 3s linear infinite; 
     cursor: pointer;

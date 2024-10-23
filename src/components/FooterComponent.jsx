@@ -3,7 +3,7 @@ import logo from '../img/tech.webp';
 import '../css/FooterComponent.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faXTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 const FooterComponent = () => {
   return (
     <footer>
@@ -34,7 +34,7 @@ const FooterComponent = () => {
         </a>
 
         <a href="https://x.com/Techlone_Global" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-          <FontAwesomeIcon icon={faTwitter} />
+          <FontAwesomeIcon icon={faXTwitter} />
         </a>
 
         <a href="https://www.linkedin.com/company/techlone-global/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">

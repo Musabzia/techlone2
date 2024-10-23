@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SocialBackground from '../img/SocialMediaCover.png';
-
-import illustrationBackground from '../img/illustrationcover.webp';
+import { Helmet } from 'react-helmet';
+import GraphicBackground from '../img/graphiccover.webp';
 import webcover from '../img/web-cover.webp';
 
 import HODBanner from '../img/HOD Banner.png';
@@ -37,9 +37,9 @@ AOS.init();
 
 const slides = [
     {
-      title: 'Illustrations',
-      image: illustrationBackground,
-      link: '/illustrations',
+      title: 'Graphic Design',
+      image: GraphicBackground,
+      link: '/Graphics',
       className: 'webdev',
     },
     {
@@ -87,6 +87,16 @@ const MarketingComponent = () => {
 
     return (
         <>
+
+            <Helmet>
+                <title>Techlone Global - Social Media Marketing</title>
+                <meta property="og:title" content="Techlone Global" />
+                <meta property="og:description" content="Boost your brand with targeted social media campaigns." />
+                <meta property="og:image" content="https://portfolio.techloneglobal.com/SocialMediaCover.png" />
+                <meta property="og:url" content="https://portfolio.techloneglobal.com" />
+                <meta property="og:type" content="website" />
+            </Helmet>
+
             <LogoAnime />
             <div
                 className="relative flex items-center justify-center h-screen bg-center text-white"

@@ -9,7 +9,6 @@ html, body {
   margin: 0;
   overflow-x: hidden;
   padding: 0;
-  
   scroll-snap-type: y mandatory;
   height: 100vh;
   -ms-overflow-style: none; /* IE and Edge */

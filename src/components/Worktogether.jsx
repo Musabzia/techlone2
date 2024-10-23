@@ -1,6 +1,6 @@
 import React from 'react'; // Corrected the React import
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faXTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import '../css/Worktogether.css';
 
 const Worktogether = () => {
@@ -20,7 +20,7 @@ const Worktogether = () => {
         </a>
 
         <a href="https://x.com/Techlone_Global" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-          <FontAwesomeIcon icon={faTwitter} />
+        <FontAwesomeIcon icon={faXTwitter} />
         </a>
 
         <a href="https://www.linkedin.com/company/techlone-global/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
