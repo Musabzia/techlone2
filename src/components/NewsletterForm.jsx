@@ -31,7 +31,7 @@ const NewsletterForm = () => {
 
       <form ref={form} onSubmit={sendEmail} className="mt-4 newsletter-form">
         <input type="email" name="user_email" placeholder="Your Email" className="input-field" required />
-        <button type="submit" className="submit-button bg-white">Subscribe</button>
+        <button type="submit" className="submit-button px-4 py-2 bg-white">Subscribe</button>
       </form>
       <div className='socials-container'>
         <Socials />

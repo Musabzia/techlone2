@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Illustration.css'; 
 import { Helmet } from 'react-helmet';
+import IllustrationLink from '../img/Covers/Illustration-Cover.webp';
 import illustrationBackground from '../img/illustrationcover.webp';
 import GraphicBackground from '../img/graphiccover.webp';
 import twitchBackground from '../img/twitchcover.webp';
@@ -74,8 +75,8 @@ const IllustrationComponent = () => {
       <Helmet>
         <meta property="og:title" content="Techlone Global" />
         <meta property="og:description" content="Transform Your Ideas into Captivating Visual Stories" />
-        <meta property="og:image" content="https://portfolio.techloneglobal.com/illustrationcover.webp" />
-        <meta property="og:url" content="https://portfolio.techloneglobal.com" />
+        <meta property="og:image" content={IllustrationLink} />
+        <meta property="og:url" content="https://portfolio.techloneglobal.com/illustrations" />
         <meta property="og:type" content="website" />
       </Helmet>
       

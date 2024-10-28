@@ -72,6 +72,7 @@ html, body, #root {
   font-size: 3.5em; /* Default for larger screens */
   padding: 0em 2em;
   text-align: center;
+  white-space: nowrap;
 }
 
 .banner-content p {
@@ -150,7 +151,7 @@ html, body, #root {
 }
 
 /* Extra small devices (iPhone SE or smaller, up to 375px) */
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .banner-content h1 {
     font-size: 1.6em; /* Adjusted size for iPhone SE */
     padding: 0em 0.8em;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Blockchain.css';
 import { Helmet } from 'react-helmet';
+import BlockLink from '../img/Covers/Blockchain-Cover.webp';
 import BlockBackground from '../img/blockchaincover.webp';
 import illustrationBackground from '../img/illustrationcover.webp';
 import webcover from '../img/web-cover.webp';
@@ -75,8 +76,8 @@ const BlockchainComponent = () => {
       <Helmet>
         <meta property="og:title" content="Techlone Global" />
         <meta property="og:description" content="Revolutionize your creativity with our blockchain services." />
-        <meta property="og:image" content="https://portfolio.techloneglobal.com/blockchaincover.webp" />
-        <meta property="og:url" content="https://portfolio.techloneglobal.com" />
+        <meta property="og:image" content={BlockLink} />
+        <meta property="og:url" content="https://portfolio.techloneglobal.com/blockchain" />
         <meta property="og:type" content="website" />
       </Helmet>
       

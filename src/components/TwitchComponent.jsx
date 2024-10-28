@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/twitch.css';
 import { Helmet } from 'react-helmet';
+import TwitchLink from '../img/Covers/Twitch-Cover.webp';
 import illustrationBackground from '../img/illustrationcover.webp';
 import BlockBackground from '../img/blockchaincover.webp';
 import twitchBackground from '../img/twitchcover.webp';
@@ -98,8 +99,8 @@ const TwitchComponent = () => {
       <Helmet>
         <meta property="og:title" content="Techlone Global" />
         <meta property="og:description" content="Supercharge Your Stream with Our Expert Twitch Services." />
-        <meta property="og:image" content="https://portfolio.techloneglobal.com/twitchcover.webp" />
-        <meta property="og:url" content="https://portfolio.techloneglobal.com" />
+        <meta property="og:image" content={TwitchLink} />
+        <meta property="og:url" content="https://portfolio.techloneglobal.com/twitch" />
         <meta property="og:type" content="website" />
       </Helmet>
 

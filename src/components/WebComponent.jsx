@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Website.css';
 import { Helmet } from 'react-helmet';
+import WebLink from '../img/Covers/Website-Cover.webp';
 import webcover from '../img/web-cover.webp';
 import webImg1 from '../img/website1.webp';
 import webImg2 from '../img/website2.webp';
@@ -65,8 +66,8 @@ const WebComponent = () => {
       <Helmet>
         <meta property="og:title" content="Techlone Global" />
         <meta property="og:description" content="Elevate Your Business with a Stunning, Responsive Website" />
-        <meta property="og:image" content="https://portfolio.techloneglobal.com/web-cover.webp" />
-        <meta property="og:url" content="https://portfolio.techloneglobal.com" />
+        <meta property="og:image" content={WebLink} />
+        <meta property="og:url" content="https://portfolio.techloneglobal.com/website" />
         <meta property="og:type" content="website" />
       </Helmet>
 

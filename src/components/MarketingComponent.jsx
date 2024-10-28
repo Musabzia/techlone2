@@ -3,7 +3,7 @@ import SocialBackground from '../img/SocialMediaCover.webp';
 import { Helmet } from 'react-helmet';
 import GraphicBackground from '../img/graphiccover.webp';
 import webcover from '../img/web-cover.webp';
-
+import MarketingLink from '../img/Covers/Marketing-Cover.webp';
 import HODBanner from '../img/HOD Banner.webp';
 import HODBanner2 from '../img/HOD Banner 2.webp';
 import HOD1 from '../img/HOD1.webp';
@@ -93,8 +93,8 @@ const MarketingComponent = () => {
                 <meta name="description" content="Boost your brand with targeted social media campaigns." />
                 <meta property="og:title" content="Techlone Global - Social Media Marketing" />
                 <meta property="og:description" content="Boost your brand with targeted social media campaigns." />
-                <meta property="og:image" content="https://portfolio.techloneglobal.com/src/img/Covers/Marketing-Cover.webp" />
-    <meta property="og:url" content="https://portfolio.techloneglobal.com" />
+                <meta property="og:image" content={MarketingLink} />
+                <meta property="og:url" content="https://portfolio.techloneglobal.com/marketing" />
                 <meta property="og:type" content="website" />
             </Helmet>
 

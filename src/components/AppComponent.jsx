@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Application.css';
 import { Helmet } from 'react-helmet';
+import AppLink from '../img/Covers/App-Cover.webp';
 import AppBackground from '../img/AppCover.webp';
 import webcover from '../img/web-cover.webp';
 import GraphicBackground from '../img/graphiccover.webp';
@@ -69,8 +70,8 @@ const AppComponent = () => {
       <Helmet>
         <meta property="og:title" content="Techlone Global" />
         <meta property="og:description" content="Transform Your Vision into a Cutting-Edge Mobile Experience." />
-        <meta property="og:image" content="https://portfolio.techloneglobal.com/App-Cover.webp" />
-        <meta property="og:url" content="https://portfolio.techloneglobal.com" />
+        <meta property="og:image" content={AppLink} />
+        <meta property="og:url" content="https://portfolio.techloneglobal.com/application" />
         <meta property="og:type" content="website" />
       </Helmet>
 

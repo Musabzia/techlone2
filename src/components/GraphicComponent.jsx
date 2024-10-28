@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import GraphicBackground from '../img/graphiccover.webp';
 import illustrationBackground from '../img/illustrationcover.webp';
 import AppBackground from '../img/AppCover.webp';
+import GraphicLink from '../img/Covers/Graphic-Cover.webp';
 
 import graphicImg1 from '../img/graphic1.webp';
 import graphicImg2 from '../img/graphic2.webp';
@@ -83,8 +84,8 @@ const GraphicComponent = () => {
       <Helmet>
         <meta property="og:title" content="Techlone Global" />
         <meta property="og:description" content="Unleash Your Brand’s Potential with Eye-Catching Designs." />
-        <meta property="og:image" content="https://portfolio.techloneglobal.com/graphiccover.webp" />
-        <meta property="og:url" content="https://portfolio.techloneglobal.com" />
+        <meta property="og:image" content={GraphicLink} />
+        <meta property="og:url" content="https://portfolio.techloneglobal.com/graphics" />
         <meta property="og:type" content="website" />
       </Helmet>
     <div className="graphic-container">
