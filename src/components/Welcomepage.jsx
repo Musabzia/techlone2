@@ -19,7 +19,7 @@ const WelcomePage = () => {
            <h2 className="stroke-text">Welcome</h2>
            </a> 
             <p className={`typed-out ${animate ? 'animate' : ''}`}>
-                To Techlone Global's Portfolio
+            To <span><a href="https://techloneglobal.com/" target="_blank">Techlone Global</a></span>'s Portfolio
             </p>
         </div>
     );

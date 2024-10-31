@@ -18,7 +18,9 @@
     -webkit-text-stroke: 2px white; /* Adjust stroke color and width */
 }
 
-
+span a{
+    color: #4794ff;
+}
 
 
 .typed-out {

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import GetInTouchForm from './GetInTouchForm.jsx';
 import NewsletterForm from './NewsletterForm.jsx';
 import '../css/VerticalBanner.css';
@@ -15,7 +16,7 @@ import WelcomePage from '../components/Welcomepage.jsx';
 
 const banners = [
   { id: 1, imageUrl: pic1, title: 'Welcome!', description: "To Techlone Global's Portfolio", link: '/' },
-  { id: 2, imageUrl: pic6, title: 'Graphic Designing', description: 'Unleash Your Brands Potential with Eye-Catching Designs', link: '/graphics' },
+  { id: 2, imageUrl: pic6, title: 'Graphic Designing', description: 'Unleash Your Brand’s Potential with Eye-Catching Designs', link: '/graphics' },
   { id: 3, imageUrl: pic8, title: 'Social Media Marketing', description: 'Boost your brand with targeted social media campaigns.', link: '/marketing' },
   { id: 4, imageUrl: pic4, title: 'Website Development', description: 'Elevate Your Business with a Stunning, Responsive Website', link: '/website' },
   { id: 5, imageUrl: pic5, title: 'Twitch Services', description: 'Supercharge Your Stream with Our Expert Twitch Services', link: '/twitch' },
@@ -28,17 +29,12 @@ const banners = [
 
 const VerticalBanner = () => {
   const bannerRef = useRef(null);
+  const sectionRefs = useRef([]);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(Array(banners.length).fill(false));
 
   useEffect(() => {
     const parent = bannerRef.current;
-    const scrollYPerView = window.innerHeight;
-
-    const handleScroll = () => {
-      const scrollTop = parent.scrollTop;
-      const currentIndex = Math.round(scrollTop / scrollYPerView);
-      setActiveIndex(currentIndex);
-    };
 
     const handleWheel = (event) => {
       event.preventDefault();
@@ -50,61 +46,105 @@ const VerticalBanner = () => {
     };
 
     const scrollUp = () => {
-      let currentScrollY = parent.scrollTop;
-      parent.scroll({ top: Math.max(currentScrollY - scrollYPerView, 0), left: 0, behavior: 'smooth' });
+      const newIndex = Math.max(activeIndex - 1, 0);
+      setActiveIndex(newIndex);
+      sectionRefs.current[newIndex].scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
 
     const scrollDown = () => {
-      let currentScrollY = parent.scrollTop;
-      const maxScroll = (banners.length - 1) * scrollYPerView;
-      parent.scroll({ top: Math.min(currentScrollY + scrollYPerView, maxScroll), left: 0, behavior: 'smooth' });
+      const newIndex = Math.min(activeIndex + 1, banners.length - 1);
+      setActiveIndex(newIndex);
+      sectionRefs.current[newIndex].scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
 
+    const observerOptions = {
+      root: parent,
+      threshold: 0.5, // Trigger when 100% of the section is visible
+    };
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const index = sectionRefs.current.indexOf(entry.target);
+        if (entry.isIntersecting) {
+          setActiveIndex(index);
+          setIsVisible((prev) => {
+            const newVisible = [...prev];
+            newVisible[index] = true; // Set this index to visible when fully in view
+            return newVisible;
+          });
+        } else {
+          setIsVisible((prev) => {
+            const newVisible = [...prev];
+            newVisible[index] = false; // Set this index to not visible when out of view
+            return newVisible;
+          });
+        }
+      });
+    }, observerOptions);
+  
+    // Observe each banner section
+    sectionRefs.current.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+  
+    // Attach the wheel event listener
     parent.addEventListener('wheel', handleWheel);
-    parent.addEventListener('scroll', handleScroll);
-
+  
     return () => {
       parent.removeEventListener('wheel', handleWheel);
-      parent.removeEventListener('scroll', handleScroll);
+      // Unobserve all sections on cleanup
+      sectionRefs.current.forEach((section) => {
+        if (section) observer.unobserve(section);
+      });
     };
-  }, []);
+  }, [activeIndex]);
+
+  const handleScrollToIndex = (index) => {
+    setActiveIndex(index);
+    sectionRefs.current[index].scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
 
   return (
-    
-    <div className="vertical-banner-wrapper">
-      <div className="vertical-banner" ref={bannerRef}>
-        {banners.map((banner, index) => (
-          <section
-            key={banner.id}
-            className="banner-section snap-start"
-            style={{
-              backgroundImage: banner.imageUrl ? `url(${banner.imageUrl})` : 'none',
-              backgroundColor: banner.backgroundColor || 'transparent',
-              height: '100vh',
-            }}
-          >
-            <div className="banner-content bg-opacity-50 p-6 text-center rounded-md md:text-left">
-              {banner.id === 1 ? (
-                <WelcomePage />
-              ) : banner.id === 9 || banner.id === 10 ? (
-                <div className="form-container">
-                  <h1 className="text-6xl text-shadow text-white font-bold">{banner.title}</h1>
-                  {banner.id === 9 && <GetInTouchForm />}
-                  {banner.id === 10 && <NewsletterForm />}
-                </div>
-              ) : (
-                <Link to={banner.link} className="banner-link">
-                  <h1 className="text-6xl text-shadow text-white font-bold">{banner.title}</h1>
-                  <div className="typed-out-container">
-                    <p className={`text-4xl text-shadow text-white mt-4 write-out ${activeIndex === index ? 'animate' : ''}`}>
-                      {banner.description}
-                    </p>
-                  </div>
-                </Link>
-              )}
-            </div>
-          </section>
-        ))}
+    <div className="vertical-banner-wrapper" ref={bannerRef}>
+      <div className="vertical-banner">
+      {banners.map((banner, index) => (
+  <section
+    key={banner.id}
+    ref={(el) => (sectionRefs.current[index] = el)}
+    className="banner-section"
+    style={{
+      backgroundImage: banner.imageUrl ? `url(${banner.imageUrl})` : 'none',
+      backgroundColor: banner.backgroundColor || 'transparent',
+      height: '100vh',
+    }}
+  >
+    <div className="banner-content bg-opacity-50 p-6 text-center rounded-md md:text-left">
+      {banner.id === 1 ? (
+        <WelcomePage />
+      ) : banner.id === 9 || banner.id === 10 ? (
+        <div className="form-container">
+          <h1 className="text-6xl text-shadow text-white font-bold">{banner.title}</h1>
+          {banner.id === 9 && <GetInTouchForm />}
+          {banner.id === 10 && <NewsletterForm />}
+        </div>
+      ) : (
+        <Link to={banner.link} className="banner-link">
+          <h1 className="text-6xl text-shadow text-white font-bold">{banner.title}</h1>
+          <div className="typed-out-container">
+            <p className={`text-4xl text-shadow text-white mt-4 write-out ${isVisible[index] ? 'animate' : ''}`}>
+              {banner.description}
+            </p>
+          </div>
+        </Link>
+      )}
+    </div>
+  </section>
+))}
+
+
       </div>
 
       {/* Vertical Dots Navigation */}
@@ -113,17 +153,11 @@ const VerticalBanner = () => {
           <div
             key={index}
             className={`dot ${index === activeIndex ? 'active' : ''}`}
-            onClick={() => {
-              bannerRef.current.scrollTo({
-                top: index * window.innerHeight,
-                behavior: 'smooth',
-              });
-            }}
+            onClick={() => handleScrollToIndex(index)}
           />
         ))}
       </div>
     </div>
-    
   );
 };
 

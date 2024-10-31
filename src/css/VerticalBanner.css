@@ -35,6 +35,9 @@ html, body, #root {
   background-size: cover;
   background-position: center;
   scroll-snap-align: start;
+  transition: transform 0.5s ease;
+  /* Remove the background overlay */
+  /* Add padding or margin if needed to avoid text touching edges */
 }
 
 .banner-section::before {
@@ -48,6 +51,7 @@ html, body, #root {
   z-index: 1; /* Place overlay behind the content */
 }
 
+
 .banner-content {
   position: relative; /* Ensure text is above the overlay */
   z-index: 2; /* Bring text in front of overlay */
@@ -55,6 +59,9 @@ html, body, #root {
 
 .vertical-banner-wrapper {
   position: relative;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
 }
 
 .vertical-dots {
@@ -97,32 +104,26 @@ html, body, #root {
 
 .write-out {
   overflow: hidden; 
-  border-right: 0em solid yellowgreen; 
   white-space: nowrap;
   text-align: center;
-  font-size: 1.6rem; 
-  width: 0; 
-  transition: width 1s ease-in-out; 
+  font-size: 1.6rem;
+  font-weight: 500; 
 }
-.write-out p{
-  overflow: hidden; 
-  border-right: 0em solid yellowgreen; 
-  font-size: 1.6rem; 
-  width: 0; 
-  transition: width 1s ease-in-out; 
-}
+
 
 .write-out.animate {
-  animation: typing 3s forwards, blink-caret 0.75s step-end infinite; 
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  color: transparent;
+  background: linear-gradient(white 0 0) no-repeat;
+  background-size: 0% 100%; /* we start at 0% 100% */
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: t 2s .1s both;
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100vw; }
-}
-
-@keyframes blink-caret {
-  50% { border-color: transparent; }
+@keyframes t{
+  to {background-size: 100% 100%}
 }
 
 /* Medium devices (tablets) */
