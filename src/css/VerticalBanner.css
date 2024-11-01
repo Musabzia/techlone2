@@ -107,7 +107,6 @@ html, body, #root {
   white-space: nowrap;
   text-align: center;
   font-size: 1.6rem;
-  font-weight: 500; 
 }
 
 
@@ -116,15 +115,20 @@ html, body, #root {
   white-space: nowrap; /* Keeps the content on a single line */
   color: transparent;
   background: linear-gradient(white 0 0) no-repeat;
-  background-size: 0% 100%; /* we start at 0% 100% */
+  background-size: 0% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   animation: t 2s .1s both;
+  text-shadow: none; 
 }
 
-@keyframes t{
-  to {background-size: 100% 100%}
+@keyframes t {
+  to {
+    background-size: 100% 100%;
+    background-color: transparent; /* No quotes around color names */
+  }
 }
+
 
 /* Medium devices (tablets) */
 @media (max-width: 768px) {
